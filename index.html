@@ -48,6 +48,9 @@
                         <div id="ticket">
                             <p>TICKET</p>
                             <h3>RESERVATION</h3>
+
+
+                            <!-- 영화 선택 -->
                             <div id="movie_select">
                                 <label for="breakfast_at_tiffanys">
                                     <input type="radio" name="movie" id="breakfast_at_tiffanys" value="breakfast_at_tiffanys">
@@ -75,20 +78,283 @@
                                 </label> <br>
                             </div>
                         </div>
-                        <div id="time_select">
+
+
+                        <!-- 시간 선택 -->
+                        <div id="day_select">
                             <h3>SELECT A DATE</h3>
+
+                            <!-- 날짜 선택 -->
                             <input type="text" id="calendar" placeholder="CLICK!">
-                            <select name="time" id="time">
-                                <option disabled selected>SELECT A TIME</option>
-                                <option value="9">09 : 00</option>
-                                <option value="11">11 : 00</option>
-                                <option value="14">14 : 00</option>
-                                <option value="17">17 : 00</option>
-                                <option value="20">20 : 00</option>
-                                <option value="23">23 : 00</option>
-                            </select>
+                            <div id="time_select">
+                                <h3>SELECT A TIME</h3>
+
+                                <!-- 시간 선택 -->
+                                <div id="time_input">
+                                    <label for="time1">09 : 00
+                                        <input type="radio" name="time" value="time1" id="time1">
+                                    </label>
+                                    <label for="time2">12 : 00
+                                        <input type="radio" name="time" value="time2" id="time2">
+                                    </label>
+                                    <label for="time3">15 : 00
+                                        <input type="radio" name="time" value="time3" id="time3">
+                                    </label>
+                                    <label for="time4">18 : 00
+                                        <input type="radio" name="time" value="time4" id="time4">
+                                    </label>
+                                    <label for="time5">21 : 00
+                                        <input type="radio" name="time" value="time5" id="time5">
+                                    </label>
+                                    <label for="time6">24 : 00
+                                        <input type="radio" name="time" value="time6" id="time6">
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <!-- 인원 수 선택 -->
+                            <div id="number_select">
+                                <label for="minus" class="minus">-</label>
+                                <input type="text" placeholder="1" value="1" class="number">
+                                <label for="plus" class="plus">+</label>
+                            </div>
+
+
+                            <!-- 좌석 선택 -->
+                            <div id="seat_select">
+                                <h3>
+                                    SELECT A SEAT
+                                </h3>
+                                <button>GO</button>
+                            </div>
+
+
+                            <!-- 제출 _ 초기화 -->
+                            <div id="button_zip">
+                                <input type="submit" value="RESERVATION">
+                                <input type="reset" value="RESET">
+                            </div>
                         </div>
                     </form>
+
+                    <div id="popup_seat">
+                        <button class="close">X</button>
+                        <div id="blueprint">
+                            <div id="screen">
+                                screen
+                            </div>
+                            <div id="seat">
+                                <div id="a">
+                                    <div class="seat_horizontal">A</div>
+                                    <div class="horizontal1">
+                                        <div class="seat1"></div>
+                                        <div class="seat2"></div>
+                                    </div>    
+                                    <div class="horizontal2">
+                                        <div class="seat3"></div>
+                                        <div class="seat4"></div>
+                                        <div class="seat5"></div>
+                                        <div class="seat6"></div>
+                                        <div class="seat7"></div>
+                                        <div class="seat8"></div>
+                                    </div>
+
+                                    <div class="horizontal3">
+                                        <div class="seat9"></div>
+                                        <div class="seat10"></div>
+                                    </div>
+                                </div>
+                                <div id="b">
+                                    <div class="seat_horizontal">B</div>
+                                    <div class="horizontal1">
+                                        <div class="seat1"></div>
+                                        <div class="seat2"></div>
+                                    </div>    
+                                    <div class="horizontal2">
+                                        <div class="seat3"></div>
+                                        <div class="seat4"></div>
+                                        <div class="seat5"></div>
+                                        <div class="seat6"></div>
+                                        <div class="seat7"></div>
+                                        <div class="seat8"></div>
+                                    </div>
+
+                                    <div class="horizontal3">
+                                        <div class="seat9"></div>
+                                        <div class="seat10"></div>
+                                    </div>
+                                </div>
+                                <div id="c">
+                                    <div class="seat_horizontal">C</div>
+                                    <div class="horizontal1">
+                                        <div class="seat1"></div>
+                                        <div class="seat2"></div>
+                                    </div>    
+                                    <div class="horizontal2">
+                                        <div class="seat3"></div>
+                                        <div class="seat4"></div>
+                                        <div class="seat5"></div>
+                                        <div class="seat6"></div>
+                                        <div class="seat7"></div>
+                                        <div class="seat8"></div>
+                                    </div>
+
+                                    <div class="horizontal3">
+                                        <div class="seat9"></div>
+                                        <div class="seat10"></div>
+                                    </div>
+                                </div>
+                                <div id="d">
+                                    <div class="seat_horizontal">D</div>
+                                    <div class="horizontal1">
+                                        <div class="seat1"></div>
+                                        <div class="seat2"></div>
+                                    </div>    
+                                    <div class="horizontal2">
+                                        <div class="seat3"></div>
+                                        <div class="seat4"></div>
+                                        <div class="seat5"></div>
+                                        <div class="seat6"></div>
+                                        <div class="seat7"></div>
+                                        <div class="seat8"></div>
+                                    </div>
+
+                                    <div class="horizontal3">
+                                        <div class="seat9"></div>
+                                        <div class="seat10"></div>
+                                    </div>
+                                </div>
+                                <div id="e">
+                                    <div class="seat_horizontal">E</div>
+                                    <div class="horizontal1">
+                                        <div class="seat1"></div>
+                                        <div class="seat2"></div>
+                                    </div>    
+                                    <div class="horizontal2">
+                                        <div class="seat3"></div>
+                                        <div class="seat4"></div>
+                                        <div class="seat5"></div>
+                                        <div class="seat6"></div>
+                                        <div class="seat7"></div>
+                                        <div class="seat8"></div>
+                                    </div>
+
+                                    <div class="horizontal3">
+                                        <div class="seat9"></div>
+                                        <div class="seat10"></div>
+                                    </div>
+                                </div>
+                                <div id="f">
+                                    <div class="seat_horizontal">F</div>
+                                    <div class="horizontal1">
+                                        <div class="seat1"></div>
+                                        <div class="seat2"></div>
+                                    </div>    
+                                    <div class="horizontal2">
+                                        <div class="seat3"></div>
+                                        <div class="seat4"></div>
+                                        <div class="seat5"></div>
+                                        <div class="seat6"></div>
+                                        <div class="seat7"></div>
+                                        <div class="seat8"></div>
+                                    </div>
+
+                                    <div class="horizontal3">
+                                        <div class="seat9"></div>
+                                        <div class="seat10"></div>
+                                    </div>
+                                </div>
+                                <div id="g">
+                                    <div class="seat_horizontal">G</div>
+                                    <div class="horizontal1">
+                                        <div class="seat1"></div>
+                                        <div class="seat2"></div>
+                                    </div>    
+                                    <div class="horizontal2">
+                                        <div class="seat3"></div>
+                                        <div class="seat4"></div>
+                                        <div class="seat5"></div>
+                                        <div class="seat6"></div>
+                                        <div class="seat7"></div>
+                                        <div class="seat8"></div>
+                                    </div>
+
+                                    <div class="horizontal3">
+                                        <div class="seat9"></div>
+                                        <div class="seat10"></div>
+                                    </div>
+                                </div>
+                                <div id="h">
+                                    <div class="seat_horizontal">H</div>
+                                    <div class="horizontal1">
+                                        <div class="seat1"></div>
+                                        <div class="seat2"></div>
+                                    </div>    
+                                    <div class="horizontal2">
+                                        <div class="seat3"></div>
+                                        <div class="seat4"></div>
+                                        <div class="seat5"></div>
+                                        <div class="seat6"></div>
+                                        <div class="seat7"></div>
+                                        <div class="seat8"></div>
+                                    </div>
+
+                                    <div class="horizontal3">
+                                        <div class="seat9"></div>
+                                        <div class="seat10"></div>
+                                    </div>
+                                </div>
+                                <div id="i">
+                                    <div class="seat_horizontal">I</div>
+                                    <div class="horizontal1">
+                                        <div class="seat1"></div>
+                                        <div class="seat2"></div>
+                                    </div>    
+                                    <div class="horizontal2">
+                                        <div class="seat3"></div>
+                                        <div class="seat4"></div>
+                                        <div class="seat5"></div>
+                                        <div class="seat6"></div>
+                                        <div class="seat7"></div>
+                                        <div class="seat8"></div>
+                                    </div>
+
+                                    <div class="horizontal3">
+                                        <div class="seat9"></div>
+                                        <div class="seat10"></div>
+                                    </div>
+                                </div>
+                                <div id="j">
+                                    <div class="seat_horizontal">J</div>
+                                    <div class="horizontal1">
+                                        <div class="seat1"></div>
+                                        <div class="seat2"></div>
+                                    </div>    
+                                    <div class="horizontal2">
+                                        <div class="seat3"></div>
+                                        <div class="seat4"></div>
+                                        <div class="seat5"></div>
+                                        <div class="seat6"></div>
+                                        <div class="seat7"></div>
+                                        <div class="seat8"></div>
+                                    </div>
+
+                                    <div class="horizontal3">
+                                        <div class="seat9"></div>
+                                        <div class="seat10"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- 버튼 -->
+                        <div id="btns">
+                            <button class="ok">OK</button>
+                            <button class="reset">RESET</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
