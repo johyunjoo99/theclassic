@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Classic</title>
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+
     <link rel="stylesheet" href="css/common.css">
 
     <link rel="stylesheet" href="css/index.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="javascript/index.js"></script>
 </head>
 <body>
@@ -45,36 +50,43 @@
                             <h3>RESERVATION</h3>
                             <div id="movie_select">
                                 <label for="breakfast_at_tiffanys">
-                                    <input type="radio" name="movie" id="breakfast_at_tiffanys" checked>
+                                    <input type="radio" name="movie" id="breakfast_at_tiffanys" value="breakfast_at_tiffanys">
                                     <span>Breakfast At Tiffany's</span>
                                 </label> <br>
                                 <label for="the_great_dictator">
-                                    <input type="radio" name="movie" id="the_great_dictator">
+                                    <input type="radio" name="movie" id="the_great_dictator" value="the_great_dictator">
                                     <span>The Great Dictator</span> 
                                 </label> <br>
                                 <label for="romeo_and_juliet">
-                                    <input type="radio" name="movie" id="romeo_and_juliet">
+                                    <input type="radio" name="movie" id="romeo_and_juliet" value="romeo_and_juliet">
                                     <span>Romeo And Juliet</span> 
                                 </label> <br>
                                 <label for="the_silence_of_the_lambs">
-                                    <input type="radio" name="movie" id="the_silence_of_the_lambs">
+                                    <input type="radio" name="movie" id="the_silence_of_the_lambs" value="the_silence_of_the_lambs">
                                     <span>The Silence Of The Lambs</span> 
                                 </label> <br>
                                 <label for="bonnie_and_clyde">
-                                    <input type="radio" name="movie" id="bonnie_and_clyde">
+                                    <input type="radio" name="movie" id="bonnie_and_clyde" value="bonnie_and_clyde">
                                     <span>Bonnie and Clyde</span> 
                                 </label> <br>
                                 <label for="the_wizard_of_oz">
-                                    <input type="radio" name="movie" id="the_wizard_of_oz">
+                                    <input type="radio" name="movie" id="the_wizard_of_oz" value="the_wizard_of_oz">
                                     <span>The Wizard Of Oz</span> 
                                 </label> <br>
                             </div>
                         </div>
                         <div id="time_select">
                             <h3>SELECT A DATE</h3>
-                            <div id="day_select">
-                                <p id="today">TODAY / <span></span></p>
-                            </div>
+                            <input type="text" id="calendar" placeholder="CLICK!">
+                            <select name="time" id="time">
+                                <option disabled selected>SELECT A TIME</option>
+                                <option value="9">09 : 00</option>
+                                <option value="11">11 : 00</option>
+                                <option value="14">14 : 00</option>
+                                <option value="17">17 : 00</option>
+                                <option value="20">20 : 00</option>
+                                <option value="23">23 : 00</option>
+                            </select>
                         </div>
                     </form>
                 </div>

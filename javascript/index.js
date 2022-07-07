@@ -1,9 +1,18 @@
+$( function() {
 
-//오늘 날짜 가져오기
-let today = new Date();   
+    $( "#calendar" ).datepicker({
 
-let year = today.getFullYear(); // 년도
-let month = today.getMonth() + 1;  // 월
-let date = today.getDate();  // 날짜
+      dateFormat: "yy / mm / dd",
 
-document.getElementById("today").innerText = year + "." + month + "." + date;
+      dayNames: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+
+      showOtherMonths: true,
+      selectOtherMonths: true,
+
+      minDate: "d",
+      maxDate: "+1w"
+    });
+
+  } );
