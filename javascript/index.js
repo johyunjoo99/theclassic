@@ -30,11 +30,13 @@ $( function() {
     });
 
 
+
     //시간 선택
     $("#time_input label").click(function(){
         $("#time_input label").removeClass("on")
         $(this).addClass("on");
     });
+
 
 
     //인원 수 선택
@@ -59,11 +61,6 @@ $( function() {
     });
 
 
-    // 초기화 버튼 click
-    $("#button_zip input:last").click(function(){
-      location.reload();
-    });
-
 
     //seat_popup open/close
     $("#seat_select button").click(function(){
@@ -72,13 +69,29 @@ $( function() {
 
     $("#popup_seat .close").click(function(){
       $("#popup_seat").hide();
+      $(".seatnumber").removeClass("select");
     });
 
 
 
     //좌석 선택
-    $(".horizontal1 > div, .horizontal2 > div, .horizontal3 > div").click(function(){
-      $(this).toggleClass("on");
+    $(".seatnumber").click(function(){
+
+      var seatCount = $(".seatnumber").val();
+      var selectSeat = $(".select").length;
+
+      if(seatCount >= selectSeat){
+
+        $(this).toggleClass("select");
+        selectSeat;
+
+      } else if(seatCount < selectSeat){
+
+        alert("Please select only the number of seats you have selected.");
+        $(".seatnumber").removeClass("select");
+  
+      }
+
     });
 
   } );

@@ -331,6 +331,8 @@ label:hover{background-color: #d82f35;}
 .horizontal1 > div:hover, .horizontal2 > div:hover,
 .horizontal3 > div:hover{background-color: #d82f35;}
 
+.select{background-color: #d82f35;}
+
 #btns{width: 80%;
       position: absolute;
       bottom: 5%; left: 50%;
