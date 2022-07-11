@@ -75,23 +75,17 @@ $( function() {
 
 
     //좌석 선택
-    $(".seatnumber").click(function(){
 
-      var seatCount = $(".seatnumber").val();
-      var selectSeat = $(".select").length;
+    $(".horizontal input").change(function(){
 
-      if(seatCount >= selectSeat){
+      var seatNumber = $(".number").val();
+      var selectSeat = $(".horizontal input:checked").length;
 
-        $(this).toggleClass("select");
-        selectSeat;
-
-      } else if(seatCount < selectSeat){
-
+      if(seatNumber < selectSeat){
         alert("Please select only the number of seats you have selected.");
-        $(".seatnumber").removeClass("select");
-  
       }
 
     });
+    
 
   } );

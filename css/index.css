@@ -277,7 +277,7 @@ label:hover{background-color: #d82f35;}
 
 #popup_seat .close:hover{background-color: #d82f35;}
 
-#blueprint{width: 80%; height: 80%;
+#blueprint{width: 80%; height: 85%;
       position: absolute;
       top: 45%; left: 50%;
       transform: translate(-50%, -50%);
@@ -290,63 +290,38 @@ label:hover{background-color: #d82f35;}
         background-color: #fff;
         color: #060606;}
 
-#seat{width: 80%; height: 80%;
+#seat{width: 90%; height: 80%;
       margin: 0 auto; display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      align-items: center; padding-bottom: 1%;}
+      justify-content: space-around;
+      align-items: center;}
 
-.seat_horizontal{width: 2vw; height: 2vw; 
+.vertical{width: 100%; height: 2vw;
+          text-align: center; display: flex;
+          justify-content: space-around;
+          align-items: center;}
+
+.horizontal{display: flex;
+            justify-content: space-around;}
+
+.horizontal_name{width: 4vw; height: 2vw;
                  font-family: 'NIXGONM-Vb';
-                 font-weight: bold; font-size: 2vw;
-                 text-align: center;}
+                 font-weight: bold;
+                 font-size: 2vw; text-align: center;}
 
-#a, #b, #c, #d, #e, #f, #g, #h, #i, #j{
-    width: 95%; height: 2vw;
-    margin: 0 auto;
-    display: flex; flex-wrap: nowrap;
-    justify-content: space-between;
-}
+.vertical > div:nth-of-type(2), 
+.vertical > div:last-of-type{width: 10%; height: 2vw;}
 
-.horizontal1, .horizontal2, .horizontal3{
-        display: flex; 
-        justify-content: space-around;
-}
+.vertical > div:nth-of-type(3){width: 30%; height: 2vw;}
 
-.horizontal1, .horizontal3{
-    width: 10%; display: flex; 
-    justify-content: space-around;
-}
+.horizontal label{width: 2vw; height: 2vw;
+                  border: 0.05vw solid #fff;
+                  overflow: hidden; position: relative;}
 
-.horizontal2{width: 30%; display: flex;
-             justify-content: space-around;}
-
-
-.seat1, .seat2, .seat3, .seat4, .seat5,
-.seat6, .seat7, .seat8, .seat9, .seat10{
-    width: 2vw; height: 2vw;
-    border: 0.05vw solid #fff;
-}
-
-.horizontal1 > div:hover, .horizontal2 > div:hover,
-.horizontal3 > div:hover{background-color: #d82f35;}
+.horizontal label input{position: absolute;
+                        left: -9999px;}
 
 .select{background-color: #d82f35;}
 
-#btns{width: 80%;
-      position: absolute;
-      bottom: 5%; left: 50%;
-      transform: translateX(-50%);
-      display: flex; justify-content: center;
-      align-items: center;}
 
-#btns button{width: 10vw; height: 3vw;
-             font-family: 'NIXGONM-Vb';
-             color: #fff; font-size: 2vw;
-             background-color: #060606;
-             border: 0.05vw solid #fff;}
 
-#btns button:hover{background-color: #d82f35;}
-
-#btns .ok{margin-right: 1%;}
-#btns .reset{margin-left: 1%;}
