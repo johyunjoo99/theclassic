@@ -10,7 +10,7 @@ $( function() {
 
     //날짜 선택
     $( "#calendar" ).datepicker({
-
+      altField: "#calendar",
       dateFormat: "yy / mm / dd",
 
       dayNames: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
@@ -21,7 +21,8 @@ $( function() {
       selectOtherMonths: true,
 
       minDate: "d",
-      maxDate: "+1w"
+      maxDate: "+1w",
+
     });
 
     $("#calendar").blur(function(){
@@ -44,7 +45,7 @@ $( function() {
       $("#number_select input").css("background-color", "#d82f35");
       $("#number_select input").css("color", "#fff");
       if($('.number').val() > 8){
-        alert("인원은 최대 8명까지 가능합니다.");
+        alert("Up to 8 people are allowed.");
         $('.number').val(8);
       } else{
         $(".number").val(parseInt($(".number").val()) + 1);
@@ -53,7 +54,7 @@ $( function() {
 
     $(".minus").click(function(){
       if($(".number").val() < 2){
-        alert("인원은 최소 1명부터 가능합니다.");
+        alert("The number of people can be at least one person is allowed.");
         $(".number").val(1);
       } else{
         $(".number").val(parseInt($(".number").val()) - 1);
@@ -65,12 +66,29 @@ $( function() {
     //seat_popup open/close
     $("#seat_select button").click(function(){
       $("#popup_seat").show();
+      $(".seat").removeClass("select");
+      $(".horizontal input").prop("checked", false); 
     });
 
     $("#popup_seat .close").click(function(){
       $("#popup_seat").hide();
-      $(".seatnumber").removeClass("select");
+      $(".seat").removeClass("select");
+      $(".horizontal input").prop("checked", false); 
     });
+
+  
+    //버튼 활성화
+    if($("input:radio[name='movie']").is(":checked") == false &&
+       ($("#calendar").val() == "") == true &&
+       $("input:radio[name='time']").is(":checked") == false){
+
+        $("#seat_select button").attr("disabled", "disabled");
+       } else{
+        
+        $("#seat_select button").removeAttr("disabled");
+
+       }
+
 
 
 
@@ -78,14 +96,40 @@ $( function() {
 
     $(".horizontal input").change(function(){
 
+      $(this).parent().toggleClass("select");
+
       var seatNumber = $(".number").val();
       var selectSeat = $(".horizontal input:checked").length;
 
       if(seatNumber < selectSeat){
         alert("Please select only the number of seats you have selected.");
+       
+        $(this).parent().toggleClass("select");
+        $(this).prop("checked", false); 
       }
 
     });
-    
 
+    $("#ok").click(function(){
+      var reservation_confirm = confirm("Would you like to make a reservation for the seat you chose. \n\n" + 
+                                        "※ You can't change your seat if you press OK. ※");
+
+      if(reservation_confirm == true){
+
+        alert("Your seat selection is complete.")
+        $("#popup_seat").hide();
+        $(".horizontal input:checked").prop("disabled", true);
+        $(".horizontal input:checked").parent().css("background-color", "#fff")
+
+      } else if(reservation_confirm == false){
+
+        $("#popup_seat").show();
+
+      }
+    });
+
+    $("#reset").click(function(){
+      $(".horizontal input").parent().removeClass("select");
+      $(".horizontal input").prop("checked", false); 
+    });
   } );

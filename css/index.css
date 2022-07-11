@@ -197,8 +197,8 @@ form{width: 95%; height: 70%;
                     text-align: center; padding: 0.3vw 0;
                     border: 0.05vw solid #fff;}
 
-#time_input input{opacity: 1; position: absolute;
-                  left: -200px;}
+/* #time_input input{opacity: 1; position: absolute;
+                  left: -200px;} */
 
 label:hover{background-color: #d82f35;}
 
@@ -249,21 +249,20 @@ label:hover{background-color: #d82f35;}
 
 
 /* 제출 _ 초기화 */
-#button_zip{width: 90%; margin: 3% auto;
-            display: flex; justify-content: space-between;
-            align-items: center;}
-#button_zip input{font-family: 'NIXGONM-Vb';
-                  font-weight: bold; font-size: 1.3vw;
-                  border: 0.05vw solid #fff;
-                  color: #fff; background-color: #060606;
-                  padding: 0.4vw;}
+#complete{width: 90%; margin: 3% auto;
+          font-family: 'NIXGONM-Vb';
+          font-weight: bold; font-size: 1.25vw;
+          border: 0.05vw solid #fff;
+          color: #fff; background-color: #060606;
+          padding: 0.4vw;}
 
-#button_zip input:hover{background-color: #d82f35;}
+#complete:hover{background-color: #d82f35;}
 
 
 /* 좌석 선택 popup */
 #popup_seat{width: 100%; height: 100%;
             position: fixed; top: 0; left: 0;
+            z-index: 2;
             background-color: #060606;
             display: none;}
 
@@ -323,5 +322,21 @@ label:hover{background-color: #d82f35;}
 
 .select{background-color: #d82f35;}
 
+#button_zip{width: 100%; position: absolute;
+            bottom: 5%; left: 0;
+            display: flex; justify-content: center;
+            align-items: center;}
+
+#button_zip button{width: 10vw; padding: 0.5vw 0;
+                   background-color: #060606;
+                   border: 0.05vw solid #fff;
+                   color: #fff;
+                   font-family: 'NIXGONM-Vb';
+                   font-weight: bold; font-size: 1.5vw;}
+
+#ok{margin-right: 1%;}
+#reset{margin-left: 1%;}
+
+#button_zip button:hover{background-color: #d82f35;}
 
 
