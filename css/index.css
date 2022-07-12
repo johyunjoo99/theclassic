@@ -17,6 +17,14 @@
 }
 /* 닉스곤폰트B */
 
+@font-face {
+      font-family: 'GmarketSansMedium';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+/* Gmarket Sans M */
+
 
 /* header */
 header{width: 100%; height: 150px;}
@@ -35,7 +43,8 @@ header{width: 100%; height: 150px;}
 
 
 /* slider */
-#slider{width: 100%; height: 41vw;}
+#slider{width: 100%; height: 41vw;
+        border: 0.05vw solid transparent;}
 #slider_box{width: 90%; height: 95%;
             margin: 1% auto; display: flex;
             justify-content: center;
@@ -195,10 +204,11 @@ form{width: 95%; height: 70%;
                     font-family: 'NIXGONM-Vb';
                     font-weight: bold; font-size: 1.2vw;
                     text-align: center; padding: 0.3vw 0;
-                    border: 0.05vw solid #fff;}
+                    border: 0.05vw solid #fff;
+                    cursor: pointer;}
 
-/* #time_input input{opacity: 1; position: absolute;
-                  left: -200px;} */
+#time_input input{opacity: 1; position: absolute;
+                  left: -200px;}
 
 label:hover{background-color: #d82f35;}
 
@@ -214,7 +224,7 @@ label:hover{background-color: #d82f35;}
                      font-family: 'NIXGONM-Vb';
                      font-weight: bold; font-size: 1.3vw;
                      border: 0.05vw solid #fff;
-                     text-align: center;}
+                     text-align: center; cursor: pointer;}
 
 #number_select input{width: 8.6vw; height: 1.8vw;
                      border: none; color: #060606;
@@ -245,7 +255,8 @@ label:hover{background-color: #d82f35;}
                     border: 0.05vw solid #fff;
                     background: none; color: #fff;}
 
-#seat_select button:hover{background-color: #d82f35;}
+#seat_select button:hover{background-color: #d82f35;
+                          cursor: pointer;}
 
 
 /* 제출 _ 초기화 */
@@ -254,9 +265,10 @@ label:hover{background-color: #d82f35;}
           font-weight: bold; font-size: 1.25vw;
           border: 0.05vw solid #fff;
           color: #fff; background-color: #060606;
-          padding: 0.4vw;}
+          padding: 0.4vw 0;}
 
-#complete:hover{background-color: #d82f35;}
+#complete:hover{background-color: #d82f35;
+                cursor: pointer;}
 
 
 /* 좌석 선택 popup */
@@ -274,7 +286,8 @@ label:hover{background-color: #d82f35;}
                    font-weight: bold; font-size: 1.5vw;
                    padding: 0.25vw 0 0.15vw 0;}
 
-#popup_seat .close:hover{background-color: #d82f35;}
+#popup_seat .close:hover{background-color: #d82f35;
+                         cursor: pointer;}
 
 #blueprint{width: 80%; height: 85%;
       position: absolute;
@@ -315,7 +328,8 @@ label:hover{background-color: #d82f35;}
 
 .horizontal label{width: 2vw; height: 2vw;
                   border: 0.05vw solid #fff;
-                  overflow: hidden; position: relative;}
+                  overflow: hidden; position: relative;
+                  cursor: pointer;}
 
 .horizontal label input{position: absolute;
                         left: -9999px;}
@@ -332,7 +346,8 @@ label:hover{background-color: #d82f35;}
                    border: 0.05vw solid #fff;
                    color: #fff;
                    font-family: 'NIXGONM-Vb';
-                   font-weight: bold; font-size: 1.5vw;}
+                   font-weight: bold; font-size: 1.5vw;
+                   cursor: pointer;}
 
 #ok{margin-right: 1%;}
 #reset{margin-left: 1%;}
@@ -340,3 +355,145 @@ label:hover{background-color: #d82f35;}
 #button_zip button:hover{background-color: #d82f35;}
 
 
+
+/* 고객 정보 입력 popup */
+#personal_info{width: 45vw; height: 40vw;
+               position: fixed; top: 50%; left: 50%;
+               transform: translate(-50%, -50%);
+               background-color: #060606;
+               border: 0.05vw solid #fff;
+               display: none;}
+
+#personal_info .close{width: 4%; position: absolute;
+                      top: 1%; right: 3%;
+                      border: 0.05vw solid #fff;
+                      background-color: #060606;
+                      color: #fff; font-family: 'NIXGONM-Vb';
+                      font-weight: bold; font-size: 1vw;
+                      padding: 0.25vw 0 0.15vw 0;
+                      cursor: pointer;}
+
+#personal_info h3{font-family: 'NIXGONM-Vb';
+                  font-size: 2.2vw; text-align: center;
+                  padding: 5% 0 2% 0;}
+
+#infomation{width: 100%; height: 28vw;
+            display: flex; flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;}
+
+#infomation label{width: 82%; height: 10%;
+                  font-family: 'NIXGONM-Vb';
+                  font-weight: bold; font-size: 2vw;
+                  display: flex; justify-content: flex-start;
+                  align-items: center; margin-left: 18%;}
+#infomation input[type="text"]{width: 13vw; height: 1.5vw; 
+                               padding: 0.9vw 2.5vw;
+                               text-align: center; margin-left: 1%;
+                               font-family: 'NIXGONM-Vb';
+                               font-weight: bold; font-size: 1vw;}
+#infomation input[type="password"]{width: 8vw; height: 1.5vw; 
+                                   padding: 0.9vw 2.5vw;
+                                   text-align: center; margin-left: 1%;
+                                   font-family: 'NIXGONM-Vb';
+                                   font-weight: bold; font-size: 1vw;}
+#infomation input::placeholder{font-family: 'NIXGONM-Vb';
+                               font-weight: bold; font-size: 1vw;}
+
+#infomation input:focus{outline: 0.15vw solid #d82f35;}
+
+#infomation label:hover{background-color: #060606;}
+
+#personal_info button{font-family: 'NIXGONM-Vb';
+                      font-weight: bold; font-size: 1.5vw;
+                      background-color: #060606;
+                      border: 0.05vw solid #fff;
+                      color: #fff; padding: 0.5vw 1vw;
+                      margin: 3% auto 0; display: block;
+                      border-radius: 0;}
+#personal_info button:hover{background-color: #d82f35;
+                            cursor: pointer;}
+
+
+/* 영화 차트 */
+#movie_chart{width: 100%; height: auto;}
+#movie_box{width: 90%; height: 40vw;
+           margin: 0 auto; 
+           border-top: 0.13vw solid #fff;}
+#chart_menu{width: 100%; height: 3.8vw;
+            display: flex; margin-top: 2%;}
+
+.movieMenu{width: 50%; height: auto;
+           font-family: 'NIXGONM-Vb'; font-size: 1.5vw;
+           text-align: center; padding: 1vw 0;
+           border: 0.05vw solid #fff;}
+
+.movieMenu:hover{background-color: #d82f35;
+                 cursor: pointer;}
+
+#content_fade{width: 100%; height: auto;
+              position: relative;}
+
+#order_reservation{width: 100%; height: auto;
+                   position: absolute;
+                   border: 0.05vw solid #fff;}
+
+.chart_th{width: 100%; height: 10%;
+          margin: 0% auto 0; display: flex;
+          justify-content: center;
+          align-items: center;}
+
+.chart_th > div{font-family: 'NIXGONB-Vb'; 
+                font-size: 1.5vw;
+                text-align: center; padding: 1vw 0;}
+
+.chart_tr:nth-of-type(even){background-color: #fff;
+                            color: #060606;}
+
+.rank{width: 10%;}
+.title{width: 50%;}
+.review{width: 15%; display: flex;
+        justify-content: center; 
+        align-items: center;}
+.genre{width: 15%;}
+
+.chart_tr{width: 100%; height: 10%;
+          margin: 0% auto; display: flex;
+          justify-content: center;
+          align-items: center;}
+
+.chart_tr > div{font-family: 'NIXGONM-Vb'; 
+                font-size: 1.5vw; font-weight: bold;
+                text-align: center; padding: 1vw 0;}
+
+img[alt="star"]{width: 1.5vw;}
+
+#scheduled_work{width: 100%; height: 25vw;
+                position: absolute;
+                border: 0.05vw solid #fff;
+                display: flex; 
+                justify-content: space-around;
+                align-items: center;}
+
+#scheduled_work button{font-family: 'GmarketSansMedium'; 
+                       font-size: 3vw; color: #fff;
+                       padding: 0.5vw 1.2vw 0 1.2vw;
+                       background-color: #1e1e1e;
+                       border: 0.05vw solid #fff;}
+
+#scheduled_work button:hover{background-color: #d82f35;}
+
+#work_slider{width: 60vw; height: 25vw;
+             border: 0.05vw solid green;
+             position: relative;
+             overflow: hidden; }
+
+#work_list{width: 100vw; height: 18.55vw;
+           position: absolute; top: 50%; left: 0;
+           transform: translateY(-50%);
+           display: flex; justify-content: space-around;
+           align-items: center;}
+
+.workImg{width: 12vw; height: 18.55vw;}
+
+.workImg img{width: 100%;}

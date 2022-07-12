@@ -78,16 +78,15 @@ $( function() {
 
   
     //버튼 활성화
-    if($("input:radio[name='movie']").is(":checked") == false &&
-       ($("#calendar").val() == "") == true &&
-       $("input:radio[name='time']").is(":checked") == false){
+    // var selectMovie = $('input[name="movie"]').is(":checked");
+    // var selectdate = $("#calendar").val() == "";
+    // var selectTime = $('input[name="time"]').is(":checked");
 
-        $("#seat_select button").attr("disabled", "disabled");
-       } else{
-        
-        $("#seat_select button").removeAttr("disabled");
-
-       }
+    // if(selectMovie == false && selectdate == true && selectTime == false){
+    //   $("#seat_select button").attr("disabled", "disabled");
+    // } else{
+    //   $("#seat_select button").removeAttr("disabled");
+    // }
 
 
 
@@ -131,5 +130,72 @@ $( function() {
     $("#reset").click(function(){
       $(".horizontal input").parent().removeClass("select");
       $(".horizontal input").prop("checked", false); 
+    });
+
+
+
+    //  personal_info
+    $("#complete").click(function(){
+      $("#personal_info").show();
+    });
+
+    $("#personal_info .close").click(function(){
+      $("#personal_info").hide();
+    });
+
+    $("#clear").click(function(){
+
+      alert("Your movie reservation is complete.");
+      $("#personal_info").hide();
+
+    });
+
+
+    //영화 차트 fade
+    $("#scheduled_work").hide();
+
+    $(".movieMenu:first").click(function(){
+      $("#order_reservation").fadeIn();
+      $("#scheduled_work").hide();
+      $(".movieMenu").removeClass("on");
+      $(this).addClass("on");
+    });
+
+    $(".movieMenu:last").click(function(){
+      $("#scheduled_work").fadeIn();
+      $("#order_reservation").hide();
+      $(".movieMenu").removeClass("on");
+      $(this).addClass("on");
+    });
+
+
+    // 상영예정작 슬라이드
+    var page = 0;
+    var fullWith = $("#work_list").width();
+    var slideWith = fullWith / 5;
+
+    $("#scheduled_work .prev").click(function(){
+
+      page--;
+
+      $("#work_list").stop().animate({marginLeft: -slideWith * page});
+
+        if(page < 0){
+          
+          page = 0;
+          $("#work_list").stop().animate({marginLeft: 0});
+
+        }
+    });
+
+    $("#scheduled_work .next").click(function(){
+
+      page++;
+
+      $("#work_list").stop().animate({marginLeft: -slideWith * page});
+
+      if(page > 3){
+        page = -1;
+      }
     });
   } );

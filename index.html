@@ -130,7 +130,7 @@
                             </div>
 
 
-                            <!-- 제출 _ 초기화 -->
+                            <!-- 제출 -->
                             <input type="submit" value="SELECTION COMPLETE" id="complete">
                         </div>
                     </form>
@@ -539,6 +539,157 @@
                             <button id="ok">OK</button>
                             <button id="reset">RESET</button>
                         </div>
+                    </div>
+
+
+                    <!-- 고객 정보 입력 popup -->
+                    <div id="personal_info">
+                        <button class="close">X</button>
+                        <h3>
+                            CUSTOMER INFOMATION INPUT
+                        </h3>
+                        <div id="infomation">
+                            <label for="name"><span>NAME</span>
+                                <input type="text" id="name" placeholder="John Doe" name="name" value="">
+                            </label>
+                            <label for="phoneNumber"><span>PHONE NUMBER</span>
+                                <input type="text" id="phoneNumber" placeholder="012-3456-7890" name="phone numer" value="">
+                            </label>
+                            <label for="birth"><span>DATE OF BIRTH</span>
+                                <input type="text" id="birth" placeholder="YYYY-MM-DD" name="birth" value="">
+                            </label>
+                            <label for="password"><span>PRE-ORDER PASSWORD</span>
+                                <input type="password" id="password" placeholder="****" name="password" val="">
+                            </label>
+                            <label for="confirm"><span>CONFIRM PASSWORD</span>
+                                <input type="password" id="confirm" placeholder="****" val="">
+                            </label>
+                        </div>
+
+                        <button id="clear">RESVERVATION COMPLETE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 영화 차트 -->
+        <div id="movie_chart">
+            <div id="movie_box">
+                <div id="chart_menu">
+                    <div class="movieMenu on">
+                        <h3>MOVIE CHART</h3>
+                    </div>
+                    <div class="movieMenu">
+                        <h3>
+                            SCHEDULED WORK
+                        </h3>
+                    </div>
+                </div>
+                <div id="content_fade">
+                    <div id="order_reservation">
+                        <div class="chart_th">
+                            <div class="rank">RANK</div>
+                            <div class="title">TITLE</div>
+                            <div class="review">REVIEW</div>
+                            <div class="genre">GENRE</div>
+                        </div>
+                        <div class="chart_tr">
+                            <div class="rank">1</div>
+                            <div class="title">Breakfast At Tiffany's</div>
+                            <div class="review">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star_02.svg" alt="star">
+                            </div>
+                            <div class="genre">DRAMA</div>
+                        </div>
+                        <div class="chart_tr">
+                            <div class="rank">2</div>
+                            <div class="title">Romeo And Juliet</div>
+                            <div class="review">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star_02.svg" alt="star">
+                            </div>
+                            <div class="genre">ROMANCE</div>
+                        </div>
+                        <div class="chart_tr">
+                            <div class="rank">3</div>
+                            <div class="title">The Silence Of The Lambs</div>
+                            <div class="review">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star_08.svg" alt="star">
+                            </div>
+                            <div class="genre">CRIME</div>
+                        </div>
+                        <div class="chart_tr">
+                            <div class="rank">4</div>
+                            <div class="title">The Great Dictator</div>
+                            <div class="review">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                            </div>
+                            <div class="genre">COMEDY</div>
+                        </div>
+                        <div class="chart_tr">
+                            <div class="rank">5</div>
+                            <div class="title">The Wizard Of Oz</div>
+                            <div class="review">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star_blank.svg" alt="star">
+                            </div>
+                            <div class="genre">FAMILY</div>
+                        </div>
+                        <div class="chart_tr">
+                            <div class="rank">6</div>
+                            <div class="title">Bonnie and Clyde</div>
+                            <div class="review">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star.svg" alt="star">
+                                <img src="img/index_img/star_blank.svg" alt="star">
+                            </div>
+                            <div class="genre">CRIME</div>
+                        </div>
+                    </div>
+                    <div id="scheduled_work">
+                        <button class="prev">&#60;</button>
+                        <div id="work_slider">
+                            <div id="work_list">
+                                <div class="workImg">
+                                    <img src="img/index_img/poster1.jpg" alt="Roman Holiday">
+                                </div>
+                                <div class="workImg">
+                                    <img src="img/index_img/poster2.jpg" alt="The Shawshank Redemption">
+                                </div>
+                                <div class="workImg">
+                                    <img src="img/index_img/poster3.jpg" alt="Mario Puzo's The Godfather">
+                                </div>
+                                <div class="workImg">
+                                    <img src="img/index_img/poster4.jpg" alt="Singin' In The Rain">
+                                </div>
+                                <div class="workImg">
+                                    <img src="img/index_img/poster5.jpg" alt="Psycho">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="next">&#62;</button>
                     </div>
                 </div>
             </div>
