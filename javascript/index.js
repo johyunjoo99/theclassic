@@ -170,32 +170,30 @@ $( function() {
 
 
     // 상영예정작 슬라이드
-    var page = 0;
     var fullWith = $("#work_list").width();
     var slideWith = fullWith / 5;
 
     $("#scheduled_work .prev").click(function(){
 
-      page--;
+      $(".workImg:last").prependTo("#work_list");
+      $("#work_list").css({marginLeft: -slideWith});
+      $("#work_list").stop().animate({marginLeft: 0});
 
-      $("#work_list").stop().animate({marginLeft: -slideWith * page});
-
-        if(page < 0){
-          
-          page = 0;
-          $("#work_list").stop().animate({marginLeft: 0});
-
-        }
+      $(".workImg").removeClass("scale");
+      $(".workImg:nth-of-type(2)").addClass("scale");
     });
 
     $("#scheduled_work .next").click(function(){
 
-      page++;
+        $(".workImg").removeClass("scale");
+        $(".workImg:nth-of-type(3)").addClass("scale");
 
-      $("#work_list").stop().animate({marginLeft: -slideWith * page});
+      $("#work_list").stop().animate({marginLeft: -slideWith}, function(){
+        $(".workImg:first").appendTo("#work_list");
+        $("#work_list").css({marginLeft: 0});
+      });
 
-      if(page > 3){
-        page = -1;
-      }
     });
+
+
   } );

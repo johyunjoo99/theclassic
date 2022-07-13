@@ -61,22 +61,23 @@ header{width: 100%; height: 150px;}
              background-color: #060606;
              position: relative;}
 
-form{width: 95%; height: 70%; 
-     border: 3px solid #fff;
+form{width: 95%; height: 70%;
      position: absolute; top: 50%; left: 0%;
      transform: translateY(-50%);
-     border-radius: 1vw; display: flex;
-     justify-content: space-around;}
+     display: flex; justify-content: center;
+     align-items: center;}
 
 
 /* 영화 선택 */
-#ticket{width: 60%; height: auto;
-       border: 0.1vw solid #fff;
-       margin: 1.5%; border-radius: 0.5vw;
+#ticket{width: 60%; height: 100%;
+       border: 0.15vw solid #fff;
+       border-radius: 1vw;
        display: flex; flex-direction: column;
-       justify-content: space-around; align-items: center;}
+       justify-content: space-around; 
+       align-items: center;
+       border-right: none;}
 
-#ticket p{width: 90%;
+#ticket p{width: 90%; height: auto;
           font-family: 'NIXGONM-Vb';
           text-align: center; font-size: 1vw;
           border-top: 0.06vw solid #fff;
@@ -84,25 +85,26 @@ form{width: 95%; height: 70%;
           padding: 1% 0; letter-spacing: 2vw;
           text-indent: 2vw;}
     
-#ticket h3{width: 90%;
+#ticket h3{width: 90%; height: auto;
            font-family: 'NIXGONM-Vb';
            text-align: center; font-size: 3.2vw;
            background-color: #fff; color: #060606;}
 
-#movie_select{width: 90%;}
+#movie_select{width: 90%; height: auto;}
 
 #movie_select input[type="radio"]{display: inline-block;
                                   width: 8%; height: 100%;
                                   margin-left: 2%; cursor: pointer;
                                   accent-color: #d82f35;}
 
-#movie_select label{display: inline-block;
-                    width: 100%; font-size: 1.2vw;
+#movie_select label{display: inline-block; 
+                    width: 100%; height: auto;
+                    font-size: 1.2vw;
                     font-family: 'NIXGONM-Vb';
                     border: 0.06vw solid #fff;
                     cursor: pointer;}
 
-#movie_select label:last-of-type{margin-bottom: 3%;}
+#movie_select label:last-of-type{margin-bottom: 2%;}
 
 #movie_select label span{display: inline-block;
                          width: 80%; height: 100%;
@@ -111,15 +113,16 @@ form{width: 95%; height: 70%;
 
 
 /* 날짜 선택 */
-#day_select{width: 40%; height: auto;
-             border: 0.1vw solid #fff;
-             border-radius: 0.5vw;
-             margin: 1.5%; display: flex;
-             flex-direction: column;}
+#day_select{width: 40%; height: 100%;
+             border: 0.15vw solid #fff;
+             border-radius: 1vw;
+             margin-left: -0.1%; display: flex;
+             flex-direction: column;
+             border-left: 0.15vw dashed #fff;}
 
 #day_select > h3{width: 90%; height: auto;
-                 margin: 1.2% auto 0;
-                 font-family: 'NIXGONM-Vb'; font-size: 1.5vw;
+                 margin: 3% auto 0;
+                 font-family: 'NIXGONM-Vb'; font-size: 2vw;
                  text-align: center; padding: 2% 0;
                  border-bottom: 0.05vw solid #fff;}
 
@@ -259,10 +262,10 @@ label:hover{background-color: #d82f35;}
                           cursor: pointer;}
 
 
-/* 제출 _ 초기화 */
+/* 제출 */
 #complete{width: 90%; margin: 3% auto;
           font-family: 'NIXGONM-Vb';
-          font-weight: bold; font-size: 1.25vw;
+          font-weight: bold; font-size: 1.3vw;
           border: 0.05vw solid #fff;
           color: #fff; background-color: #060606;
           padding: 0.4vw 0;}
@@ -415,11 +418,46 @@ label:hover{background-color: #d82f35;}
                             cursor: pointer;}
 
 
+
+/* about */
+#about{width: 100%; height: 32vw;}
+#about_box{width: 90%; height: 32vw;
+           margin: 0 auto; position: relative;
+           border-top: 0.13vw solid #fff;}
+#theater_box{width: 100%; height: 30vw;
+             position: absolute; top: 50%; left: 0;
+             transform: translateY(-48%);
+             border: 0.05vw solid #fff;
+             display: flex; 
+             justify-content: space-between;
+             align-items: center;}
+
+#theater_info{width: 50%; height: 9vw;}
+
+#theater_info h2{font-family: 'NIXGONM-Vb';
+                 font-weight: bold; font-size: 3vw;
+                 text-align: center;
+                 margin-bottom: 1.5vw;}
+
+#theater_info p{font-family: 'NIXGONM-Vb';
+                font-size: 1.1vw; text-align: center;
+                line-height: 1.6vw}
+
+#img_box{width: 45%; height: 23vw;
+         position: absolute; top: 50%; right: 4%;
+         transform: translateY(-50%);
+         border: 0.05vw solid #fff;}
+
+#img_box img{width: 85%; position: absolute;
+             top: 50%; left: 50%;
+             transform: translate(-50%, -50%);}
+
+
+
 /* 영화 차트 */
 #movie_chart{width: 100%; height: auto;}
-#movie_box{width: 90%; height: 40vw;
-           margin: 0 auto; 
-           border-top: 0.13vw solid #fff;}
+#movie_box{width: 90%; height: 33vw;
+           margin: 0 auto;}
 #chart_menu{width: 100%; height: 3.8vw;
             display: flex; margin-top: 2%;}
 
@@ -435,8 +473,7 @@ label:hover{background-color: #d82f35;}
               position: relative;}
 
 #order_reservation{width: 100%; height: auto;
-                   position: absolute;
-                   border: 0.05vw solid #fff;}
+                   position: absolute;}
 
 .chart_th{width: 100%; height: 10%;
           margin: 0% auto 0; display: flex;
@@ -470,7 +507,6 @@ img[alt="star"]{width: 1.5vw;}
 
 #scheduled_work{width: 100%; height: 25vw;
                 position: absolute;
-                border: 0.05vw solid #fff;
                 display: flex; 
                 justify-content: space-around;
                 align-items: center;}
@@ -484,7 +520,6 @@ img[alt="star"]{width: 1.5vw;}
 #scheduled_work button:hover{background-color: #d82f35;}
 
 #work_slider{width: 60vw; height: 25vw;
-             border: 0.05vw solid green;
              position: relative;
              overflow: hidden; }
 
@@ -494,6 +529,10 @@ img[alt="star"]{width: 1.5vw;}
            display: flex; justify-content: space-around;
            align-items: center;}
 
-.workImg{width: 12vw; height: 18.55vw;}
+.workImg{width: 12vw; height: 18.55vw;
+         transition: all 0.5s ease;}
+
+.scale{transform: scale(1.2);}
 
 .workImg img{width: 100%;}
+
