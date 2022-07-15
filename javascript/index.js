@@ -196,4 +196,29 @@ $( function() {
     });
 
 
+    //footer hover
+    $("#percentage2 img").hover(function(){
+      $(this).siblings("span").fadeIn();
+    }, function(){
+      $(this).siblings("span").fadeOut(100);
+    })
+
+
+    // 앵커 이동
+    $(".bigNav li a").click(function(){
+
+      var target = $(this).attr("href");
+      var offset = $(target).offset().top;
+
+      $("html, body").animate({scrollTop: offset - 50}, 400);
+    });
+
+    $("#address ul li a").click(function(){
+      var target = $(this).attr("href");
+      var offset = $(target).offset().top;
+
+      $("html, body").animate({scrollTop: offset - 50}, 400);
+    });
+
+
   } );
