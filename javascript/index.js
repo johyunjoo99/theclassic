@@ -1,5 +1,29 @@
 $( function() {
 
+  //top icon click
+  $(document).scroll(function(){
+
+    var headerHeight = $("header").height();
+
+    if($(this).scrollTop() <= headerHeight){
+
+      $("img[alt='top']").css("display", "none");
+
+    }else{
+
+      $("img[alt='top']").css("display", "block");
+
+    }
+  })
+
+  $("img[alt='top']").click(function(){
+
+    $("html, body").animate({scrollTop: 0}, 400);
+
+  })
+
+
+
     //영화 선택
     $("#movie_select label").click(function(){
       $("#movie_select label").removeClass("on");
@@ -75,18 +99,6 @@ $( function() {
       $(".seat").removeClass("select");
       $(".horizontal input").prop("checked", false); 
     });
-
-  
-    //버튼 활성화
-    // var selectMovie = $('input[name="movie"]').is(":checked");
-    // var selectdate = $("#calendar").val() == "";
-    // var selectTime = $('input[name="time"]').is(":checked");
-
-    // if(selectMovie == false && selectdate == true && selectTime == false){
-    //   $("#seat_select button").attr("disabled", "disabled");
-    // } else{
-    //   $("#seat_select button").removeAttr("disabled");
-    // }
 
 
 

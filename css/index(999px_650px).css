@@ -26,36 +26,36 @@
 /* Gmarket Sans M */
 
 
-@media (min-width: 1000px){
+@media (max-width: 999px) and (min-width: 650px){
 
 /* header */
-header{width: 100%; height: 8vw;}
+header{width: 100%; height: 15vw;}
 #navi{width: 90%; height: 100%;
       margin: 0 auto; display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 0.13vw solid #fff;}
+      border-bottom: 0.2vw solid #fff;}
 
 .bigNav{width: 35%; height: 100%;
         display: flex; justify-content: space-around;
         align-items: center;}
-.bigNav li a{font-family: 'NIXGONM-Vb'; font-size: 1.3vw;
+.bigNav li a{font-family: 'NIXGONM-Vb'; font-size: 2.3vw;
              padding: 0.3vw 1.5vw;
              transition: box-shadow .3s ease-in-out;}
 
 .bigNav li a:hover{box-shadow: inset 200px 0 0 0 #d82f35;}
 
-#navi img{width: 20%; cursor: pointer;}
+#navi img{width: 25%; cursor: pointer;}
 
 
 /* top icon */
 img[alt="top"]{
-        width: 3vw;
+        width: 5.5vw;
         background-color: #1e1e1e;
         border: 0.05vw solid #fff;
         padding: 0.3vw;
         position: fixed;
-        bottom: 5%; right: 1%;
+        bottom: 5%; right: 5%;
         z-index: 10;
         cursor: pointer;
         display: none;
@@ -64,131 +64,132 @@ img[alt="top"]{
 
 
 /* slider */
-#slider{width: 100%; height: 41vw;
-        border: 0.05vw solid transparent;}
-#slider_box{width: 90%; height: 95%;
+#slider{width: 100%;
+        border: 0.23vw solid transparent;}
+#slider_box{width: 90%; height: 90%;
             margin: 1% auto; display: flex;
+            flex-direction: column-reverse;
             justify-content: center;
             align-items: center;
-            border-top: 0.05vw solid #fff;
-            border-bottom: 0.05vw solid #fff;}
+            border-top: 0.3vw solid #fff;
+            border-bottom: 0.3vw solid #fff;
+            padding: 2.5vw 0;}
 
-#slider_box > img{width: 50%; height: 35vw;}
+#slider_box > img{width: 100%;}
 
 
 
 /* 예매창 */
-#reservation{width: 50%; height: 35vw;
+#reservation{width: 100%; height: 60vw;
              background-color: #060606;
              position: relative;}
 
-form{width: 95%; height: 70%;
-     position: absolute; top: 50%; left: 0%;
-     transform: translateY(-50%);
+form{width: 90%; height: 85%;
+     position: absolute; top: 50%; left: 50%;
+     transform: translate(-50%, -50%);
      display: flex; justify-content: center;
      align-items: center;}
 
 
 /* 영화 선택 */
 #ticket{width: 60%; height: 100%;
-        border: 0.15vw solid #fff;
+        border: 0.3vw solid #fff;
         border-radius: 1vw;
         display: flex; flex-direction: column;
         justify-content: space-around; 
         align-items: center;
         border-right: none;}
 
-#ticket p{width: 90%; height: 1.6vw;
+#ticket p{width: 90%; height: 4vw;
           font-family: 'NIXGONM-Vb';
-          text-align: center; font-size: 1vw;
-          border-top: 0.06vw solid #fff;
-          border-bottom: 0.06vw solid #fff;
+          text-align: center; font-size: 2.5vw;
+          border-top: 0.23vw solid #fff;
+          border-bottom: 0.2vw solid #fff;
           padding: 1% 0; letter-spacing: 2vw;
           text-indent: 2vw;}
     
-#ticket h3{width: 90%; height: 3.2vw;
+#ticket h3{width: 90%; height: 5.5vw;
            font-family: 'NIXGONM-Vb';
-           text-align: center; font-size: 3.2vw;
+           text-align: center; font-size: 5vw;
            background-color: #fff; color: #060606;}
 
-#movie_select{width: 90%; height: 15.5vw;}
+#movie_select{width: 90%; height: 35vw;}
 
 #movie_select input[type="radio"]{display: inline-block;
-                                  width: 8%; height: 0.7vw;
-                                  margin-left: 2%;
+                                  width: 8%; height: 2vw;
+                                  margin: 0 2% 0 2.5%;
                                   cursor: pointer;
                                   accent-color: #d82f35;}
 
 #movie_select label{display: inline-block; 
-                    width: 100%; height: 2.6vw;
-                    font-size: 1.2vw;
+                    width: 100%; height: 5.8vw;
                     font-family: 'NIXGONM-Vb';
-                    border: 0.06vw solid #fff;
+                    border: 0.23vw solid #fff;
                     cursor: pointer;}
 
 #movie_select label:last-of-type{margin-bottom: 3%;}
 
 #movie_select label span{display: inline-block;
-                         border-left: 0.06vw solid;
-                         padding: 3% 0 2% 3%;
-                         font-size: 1.2vw;}
+                         border-left: 0.06vw solid #fff;
+                         padding: 3% 0 3% 4%;
+                         font-size: 2.5vw;}
 
 
 /* 날짜 선택 */
 #day_select{width: 40%; height: 100%;
-             border: 0.15vw solid #fff;
+             border: 0.3vw solid #fff;
              border-radius: 1vw;
              margin-left: -0.1%; display: flex;
              flex-direction: column;
-             border-left: 0.15vw dashed #fff;}
+             border-left: 0.3vw dashed #fff;}
 
-#day_select > h3{width: 90%; height: 2.7vw;
-                 margin: 3% auto 0;
-                 font-family: 'NIXGONM-Vb'; font-size: 2vw;
+#day_select > h3{width: 90%; height: 5.2vw;
+                 margin: 2% auto 0;
+                 font-family: 'NIXGONM-Vb'; font-size: 3.7vw;
                  text-align: center; padding: 2% 0;
-                 border-bottom: 0.05vw solid #fff;}
+                 border-bottom: 0.23vw solid #fff;}
 
-#calendar{width: 90%; margin: 3% 5%;
-          font-size: 1.5vw; background-color: #fff;
+#calendar{width: 90%; height: 4.5vw;
+          margin: 3% 5%;
+          font-size: 3vw; background-color: #fff;
           border: none; border-radius: 0;
           font-family: 'NIXGONM-Vb'; font-weight: bold;
-          text-align: center; padding: 0.3vw 0;
+          text-align: center; padding: 0.5vw 0;
           cursor: pointer;}
 
 #calendar:focus{outline: none;}
 
 /* 달력 디자인 */
-.ui-datepicker{width: 14.2vw;
+.ui-datepicker{width: 28vw;
                border: none; background: #060606;}
 .ui-widget.ui-widget-content{border: none;}
-.ui-datepicker-header{width: 100%; margin-top: 3%;
-                      font-family: 'NIXGONM-Vb'; font-size: 1vw;
+.ui-datepicker-header{width: 100%; margin-top: 2%;
+                      font-family: 'NIXGONM-Vb'; font-size: 2.2vw;
                       border: none; background: none;
-                      border-top: 0.05vw solid #fff;
-                      border-bottom: 0.05vw solid #fff;
+                      border-top: 0.23vw solid #fff;
+                      border-bottom: 0.23vw solid #fff;
                       color: #fff; border-radius: 0;}
 
-.ui-datepicker .ui-datepicker-header{width: 100%;
-                                     padding-top: 0.01rem;}
+.ui-datepicker .ui-datepicker-header{width: 100%;}
 
 
 .ui-datepicker-table{width: 100%;}
 
-.ui-datepicker-calendar th{width: 14%;
+.ui-datepicker-calendar th{width: 14%; height: 6%;
                            font-family: 'NIXGONM-Vb'; color: #fff;}
 
 .ui-icon, .ui-widget-content .ui-icon{display: none;
                                       background: none;}
 
-.ui-datepicker-calendar th span{font-size: 0.8vw;}
+.ui-datepicker-calendar th span{font-size: 1.5vw;}
 
 .ui-datepicker-calendar td{width: 14%;
-                           border: 0.05vw solid #fff;}
+                           border: 0.1vw solid #fff;}
 
 .ui-datepicker-week-end{padding: 0;}
 
-.ui-datepicker-calendar td a{padding: 0.4vw 0;
-                             font-size: 0.8vw;}
+.ui-datepicker-calendar td a{padding: 0.8vw 0;
+                             font-size: 1vw;}
 
 .ui-state-default, 
 .ui-widget-content 
@@ -206,31 +207,31 @@ form{width: 95%; height: 70%;
                                                       background-color: #d82f35;}
 
 .ui-state-disabled, .ui-widget-content .ui-state-disabled{width: 14%;}
-.ui-state-disabled, .ui-widget-content .ui-state-disabled span{padding: 0.4vw 0;
-                                                               font-size: 0.8vw;}
+.ui-state-disabled, .ui-widget-content .ui-state-disabled span{padding: 0.8vw 0;
+                                                               font-size: 1.2vw;}
 
 
 /* 시간 선택 */
-#time_select{width: 90%; height: 8.3vw;
+#time_select{width: 90%; height: 20vw;
              margin: 0 auto;}
 
 #time_select h3{font-family: 'NIXGONM-Vb';
-                font-size: 1.5vw; text-align: center;
-                border: 0.05vw solid #fff;
-                padding: 0.3vw 0;}
+                font-size: 3.2vw; text-align: center;
+                border: 0.23vw solid #fff;
+                padding: 0.5vw 0;}
 
-#time_input{width: 100%; height: 6vw;
+#time_input{width: 100%; height: 9vw;
             display: flex; flex-wrap: wrap; 
             justify-content: space-between;
             align-items: center;}
 
-#time_input > label{width: 50%; height: 2vw;
+#time_input > label{width: 50%; height: 4.8vw;
                     overflow: hidden;
                     position: relative;
                     font-family: 'NIXGONM-Vb';
-                    font-weight: bold; font-size: 1.2vw;
-                    text-align: center; padding: 0.3vw 0;
-                    border: 0.05vw solid #fff;
+                    font-weight: bold; font-size: 2.8vw;
+                    text-align: center; padding: 1vw 0;
+                    border: 0.23vw solid #fff;
                     cursor: pointer;}
 
 #time_input input{opacity: 1; position: absolute;
@@ -242,44 +243,44 @@ label:hover{background-color: #d82f35;}
 
 
 /* 인원 수 선택 */
-#number_select{width: 90%; height: 1.8vw;
+#number_select{width: 90%; height: 3.5vw;
                margin: 3% auto; display: flex;
                justify-content: space-between;
-               align-items: center;}
-#number_select label{width: 2.2vw; height: 2vw;
-                     padding: 0.3vw;
+               align-items: center; padding: 3% 0 5%;}
+#number_select label{width: 4vw; height: 4vw;
+                     padding: 0.5vw;
                      font-family: 'NIXGONM-Vb';
-                     font-weight: bold; font-size: 1.3vw;
+                     font-weight: bold; font-size: 3vw;
                      border: 0.05vw solid #fff;
                      text-align: center; cursor: pointer;}
 
-#number_select input{width: 8.6vw; height: 2vw;
+#number_select input{width: 18.5vw; height: 4vw;
                      border: none; color: #060606;
                      background-color: #fff;
                      text-align: center;
                      font-family: 'NIXGONM-Vb';
-                     font-weight: bold; font-size: 1vw;}
+                     font-weight: bold; font-size: 2.5vw;}
 
 #number_select input:focus{outline: none;}
 
 
 
 /* 좌석 선택 */
-#seat_select{width: 90%; height: 1.5vw;
+#seat_select{width: 90%; height: 3vw;
              margin: 0% auto; display: flex; 
              justify-content: space-between;
              align-items: center; 
-             border-top: 0.05vw solid #fff;
-             border-bottom: 0.05vw solid #fff;
+             border-top: 0.23vw solid #fff;
+             border-bottom: 0.23vw solid #fff;
              padding: 8% 0;}
 
 #seat_select h3{font-family: 'NIXGONM-Vb';
-                font-weight: bold; font-size: 1.5vw;}
-#seat_select button{width: 3vw; height: 1.8vw;
-                    padding: 0.3vw 0 0.2vw 0;
+                font-weight: bold; font-size: 3vw;}
+#seat_select button{width: 5.5vw; height: 3.5vw;
+                    padding: 0.3vw 0 0.3vw 0;
                     font-family: 'NIXGONM-Vb';
                     text-align: center;
-                    font-weight: bold; font-size: 1vw;
+                    font-weight: bold; font-size: 2.5vw;
                     border: 0.05vw solid #fff;
                     background: none; color: #fff;}
 
@@ -288,10 +289,10 @@ label:hover{background-color: #d82f35;}
 
 
 /* 제출 */
-#complete{width: 90%; height: 2.5vw;
-          margin: 3% auto;
+#complete{width: 90%; height: 5vw;
+          margin: 4% auto 3%;
           font-family: 'NIXGONM-Vb';
-          font-weight: bold; font-size: 1.3vw;
+          font-weight: bold; font-size: 2.5vw;
           border: 0.05vw solid #fff;
           color: #fff; background-color: #060606;
           padding: 0.4vw 0;}
@@ -303,41 +304,42 @@ label:hover{background-color: #d82f35;}
 /* 좌석 선택 popup */
 #popup_seat{width: 100%; height: 100%;
             position: fixed; top: 0; left: 0;
-            z-index: 2;
+            z-index: 10;
             background-color: #060606;
             display: none;}
 
-#popup_seat .close{width: 2.2%; position: absolute;
+#popup_seat .close{width: 5%; height: 4%;
+                   position: absolute;
                    top: 5%; right: 5%;
-                   border: 0.05vw solid #fff;
+                   border: 0.23vw solid #fff;
                    background-color: #060606;
                    color: #fff; font-family: 'NIXGONM-Vb';
-                   font-weight: bold; font-size: 1.5vw;
-                   padding: 0.25vw 0 0.15vw 0;}
+                   font-weight: bold; font-size: 2.5vw;
+                   padding: 0.1vw 0 0.1vw 0;}
 
 #popup_seat .close:hover{background-color: #d82f35;
                          cursor: pointer;}
 
-#blueprint{width: 80%; height: 85%;
+#blueprint{width: 85%; height: 70%;
       position: absolute;
-      top: 45%; left: 50%;
+      top: 50%; left: 50%;
       transform: translate(-50%, -50%);
-      border: 0.05vw solid #fff;}
+      border: 0.23vw solid #fff;}
 
 #screen{width: 100%; margin: 2% auto;
         font-family: 'NIXGONM-Vb';
-        font-weight: bold; font-size: 2vw;
-        text-align: center; padding: 1vw 0;
+        font-weight: bold; font-size: 4.5vw;
+        text-align: center; padding: 0.5vw 0;
         background-color: #fff;
         color: #060606;}
 
-#seat{width: 90%; height: 80%;
+#seat{width: 90%; height: 85%;
       margin: 0 auto; display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;}
 
-.vertical{width: 100%; height: 2vw;
+.vertical{width: 100%; height: 5vw;
           text-align: center; display: flex;
           justify-content: space-around;
           align-items: center;}
@@ -345,18 +347,18 @@ label:hover{background-color: #d82f35;}
 .horizontal{display: flex;
             justify-content: space-around;}
 
-.horizontal_name{width: 4vw; height: 2vw;
+.horizontal_name{width: 4vw; height: 3vw;
                  font-family: 'NIXGONM-Vb';
                  font-weight: bold;
-                 font-size: 2vw; text-align: center;}
+                 font-size: 3.5vw; text-align: center;}
 
 .vertical > div:nth-of-type(2), 
-.vertical > div:last-of-type{width: 10%; height: 2vw;}
+.vertical > div:last-of-type{width: 15%; height: 2.5vw;}
 
-.vertical > div:nth-of-type(3){width: 30%; height: 2vw;}
+.vertical > div:nth-of-type(3){width: 45%; height: 2.5vw;}
 
-.horizontal label{width: 2vw; height: 2vw;
-                  border: 0.05vw solid #fff;
+.horizontal label{width: 3vw; height: 3vw;
+                  border: 0.23vw solid #fff;
                   overflow: hidden; position: relative;
                   cursor: pointer;}
 
@@ -366,16 +368,16 @@ label:hover{background-color: #d82f35;}
 .select{background-color: #d82f35;}
 
 #button_zip{width: 100%; position: absolute;
-            bottom: 5%; left: 0;
+            bottom: 9%; left: 0;
             display: flex; justify-content: center;
             align-items: center;}
 
-#button_zip button{width: 10vw; padding: 0.5vw 0;
+#button_zip button{width: 17vw; padding: 0.8vw 0;
                    background-color: #060606;
-                   border: 0.05vw solid #fff;
+                   border: 0.23vw solid #fff;
                    color: #fff;
                    font-family: 'NIXGONM-Vb';
-                   font-weight: bold; font-size: 1.5vw;
+                   font-weight: bold; font-size: 3vw;
                    cursor: pointer;}
 
 #ok{margin-right: 1%;}
@@ -386,58 +388,58 @@ label:hover{background-color: #d82f35;}
 
 
 /* 고객 정보 입력 popup */
-#personal_info{width: 45vw; height: 40vw;
+#personal_info{width: 80vw; height: 80vw;
                position: fixed; top: 50%; left: 50%;
                transform: translate(-50%, -50%);
                background-color: #060606;
-               border: 0.05vw solid #fff;
+               border: 0.23vw solid #fff;
                display: none;}
 
-#personal_info .close{width: 4%; position: absolute;
+#personal_info .close{width: 5%; position: absolute;
                       top: 1%; right: 3%;
-                      border: 0.05vw solid #fff;
+                      border: 0.23vw solid #fff;
                       background-color: #060606;
                       color: #fff; font-family: 'NIXGONM-Vb';
-                      font-weight: bold; font-size: 1vw;
-                      padding: 0.25vw 0 0.15vw 0;
+                      font-weight: bold; font-size: 3vw;
+                      padding: 0.25vw 1vw 0.15vw 0.8vw;
                       cursor: pointer;}
 
 #personal_info h3{font-family: 'NIXGONM-Vb';
-                  font-size: 2.2vw; text-align: center;
-                  padding: 5% 0 2% 0;}
+                  font-size: 4.5vw; text-align: center;
+                  padding: 5% 0 2% 0;
+                  margin-top: 7%;}
 
-#infomation{width: 100%; height: 28vw;
+#infomation{width: 100%; height: 50vw;
             display: flex; flex-direction: column;
             justify-content: space-around;
             align-items: flex-start;}
 
 #infomation label{width: 82%; height: 10%;
                   font-family: 'NIXGONM-Vb';
-                  font-weight: bold; font-size: 2vw;
+                  font-weight: bold; font-size: 3vw;
                   display: flex; justify-content: flex-start;
                   align-items: center; margin-left: 18%;}
-#infomation input[type="text"]{width: 13vw; height: 1.5vw; 
-                               padding: 0.9vw 2.5vw;
+#infomation input[type="text"]{width: 22vw; height: 4vw; 
                                text-align: center; margin-left: 1%;
                                font-family: 'NIXGONM-Vb';
-                               font-weight: bold; font-size: 1vw;}
-#infomation input[type="password"]{width: 8vw; height: 1.5vw; 
+                               font-weight: bold; font-size: 2vw;}
+#infomation input[type="password"]{width: 13vw; height: 4vw; 
                                    padding: 0.9vw 2.5vw;
                                    text-align: center; margin-left: 1%;
                                    font-family: 'NIXGONM-Vb';
-                                   font-weight: bold; font-size: 1vw;}
+                                   font-weight: bold; font-size: 2vw;}
 #infomation input::placeholder{font-family: 'NIXGONM-Vb';
-                               font-weight: bold; font-size: 1vw;}
+                               font-weight: bold; font-size: 2vw;}
 
-#infomation input:focus{outline: 0.15vw solid #d82f35;}
+#infomation input:focus{outline: 0.23vw solid #d82f35;}
 
 #infomation label:hover{background-color: #060606;}
 
 #personal_info button{font-family: 'NIXGONM-Vb';
-                      font-weight: bold; font-size: 1.5vw;
+                      font-weight: bold; font-size: 3vw;
                       background-color: #060606;
-                      border: 0.05vw solid #fff;
-                      color: #fff; padding: 0.5vw 1vw;
+                      border: 0.23vw solid #fff;
+                      color: #fff; padding: 1vw 1.5vw;
                       margin: 3% auto 0; display: block;
                       border-radius: 0;}
 #personal_info button:hover{background-color: #d82f35;
@@ -446,49 +448,54 @@ label:hover{background-color: #d82f35;}
 
 
 /* about */
-#about{width: 100%; height: 34vw;}
-#about_box{width: 90%; height: 34vw;
+#about{width: 100%; height: 65vw;}
+#about_box{width: 90%; height: 65vw;
            margin: 0 auto; position: relative;
-           border-top: 0.13vw solid #fff;}
-#theater_box{width: 100%; height: 30vw;
+           border-top: 0.2vw solid #fff;
+           display: flex; 
+           flex-direction: column;
+           justify-content: space-between;
+           align-items: center;}
+#theater_box{width: 100%; height: 60vw;
              position: absolute; top: 50%; left: 0;
              transform: translateY(-50%);
-             border: 0.05vw solid #fff;
-             display: flex; 
-             justify-content: space-between;
-             align-items: center;}
+             border: 0.23vw solid #fff;}
 
-#theater_info{width: 50%; height: 11vw;}
+#theater_info{width: 100%; height: 25vw;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;}
 
 #theater_info h2{font-family: 'NIXGONM-Vb';
-                 font-weight: bold; font-size: 3vw;
+                 font-weight: bold; font-size: 5vw;
                  text-align: center;
                  margin-bottom: 0.8vw;}
 
 #theater_info p{font-family: 'NIXGONM-Vb';
-                font-size: 1.1vw; text-align: center;
-                line-height: 1.6vw; margin-top: 0.8vw;}
+                font-size: 2vw; text-align: center;
+                line-height: 2.5vw; margin-top: 0.8vw;}
 
-#img_box{width: 45%; height: 23vw;
-         position: absolute; top: 50%; right: 4%;
-         transform: translateY(-50%);
-         border: 0.05vw solid #fff;}
+#img_box{width: 90%; height: 33vw;
+         border: 0.05vw solid #fff;
+         position: relative; bottom: 3%;
+         margin: 0 auto;}
 
-#img_box img{width: 85%; position: absolute;
+#img_box img{width: 70%; position: absolute;
              top: 50%; left: 50%;
              transform: translate(-50%, -50%);}
 
 
 
 /* 영화 차트 */
-#movie_chart{width: 100%; height: 33vw;}
-#movie_box{width: 90%; height: 33vw;
+#movie_chart{width: 100%; height: 43vw;}
+#movie_box{width: 90%; height: 43vw;
            margin: 0 auto;}
-#chart_menu{width: 100%; height: 3.8vw;
+#chart_menu{width: 100%; height: 5vw;
             display: flex; margin-top: 2%;}
 
 .movieMenu{width: 50%; height: auto;
-           font-family: 'NIXGONM-Vb'; font-size: 1.5vw;
+           font-family: 'NIXGONM-Vb'; font-size: 2.5vw;
            text-align: center; padding: 1vw 0;
            border: 0.05vw solid #fff;}
 
@@ -500,17 +507,17 @@ label:hover{background-color: #d82f35;}
 
 #order_reservation{width: 100%; height: auto;
                    position: absolute;
-                   border: 0.05vw solid #fff;
+                   border: 0.23vw solid #fff;
                    border-top: none;}
 
-.chart_th{width: 100%; height: 10%;
+.chart_th{width: 100%; height: 5vw;
           margin: 0% auto 0; display: flex;
           justify-content: center;
           align-items: center;}
 
 .chart_th > div{font-family: 'NIXGONB-Vb'; 
-                font-size: 1.5vw;
-                text-align: center; padding: 1vw 0;}
+                font-size: 2.3vw;
+                text-align: center; padding: 1.5vw 0;}
 
 .chart_tr:nth-of-type(even){background-color: #fff;
                             color: #060606;}
@@ -522,44 +529,44 @@ label:hover{background-color: #d82f35;}
         align-items: center;}
 .genre{width: 15%;}
 
-.chart_tr{width: 100%; height: 10%;
+.chart_tr{width: 100%; height: 5vw;
           margin: 0% auto; display: flex;
           justify-content: center;
           align-items: center;}
 
 .chart_tr > div{font-family: 'NIXGONM-Vb'; 
-                font-size: 1.5vw; font-weight: bold;
+                font-size: 2vw; font-weight: bold;
                 text-align: center; padding: 1vw 0;}
 
-img[alt="star"]{width: 1.5vw;}
+img[alt="star"]{width: 2vw;}
 
-#scheduled_work{width: 100%; height: 26vw;
+#scheduled_work{width: 100%; height: 35vw;
                 position: absolute; display: flex; 
                 justify-content: space-around;
                 align-items: center;
-                border: 0.05vw solid #fff;
+                border: 0.23vw solid #fff;
                 border-top: none;}
 
 #scheduled_work button{font-family: 'GmarketSansMedium'; 
-                       font-size: 3vw; color: #fff;
-                       padding: 0.5vw 1.2vw 0 1.2vw;
+                       font-size: 4vw; color: #fff;
+                       padding: 0.6vw 1.2vw 0 1.2vw;
                        background-color: #1e1e1e;
                        border: 0.05vw solid #fff;
                        border-radius: 0; cursor: pointer;}
 
 #scheduled_work button:hover{background-color: #d82f35;}
 
-#work_slider{width: 56vw; height: 25vw;
+#work_slider{width: 60vw; height: 30vw;
              position: relative;
              overflow: hidden; }
 
-#work_list{width: 100vw; height: 18.55vw;
+#work_list{width: 100vw; height: 25vw;
            position: absolute; top: 50%; left: 0;
            transform: translateY(-50%);
            display: flex; justify-content: space-around;
            align-items: center;}
 
-.workImg{width: 12vw; height: 18.55vw;
+.workImg{width: 14vw; height: 21.5vw;
          position: relative;
          transition: all 0.5s ease;}
 
@@ -587,41 +594,41 @@ img[alt="star"]{width: 1.5vw;}
                         z-index: 0; opacity: 1;}
 
 .overlay h4{font-family: 'NIXGONM-Vb'; 
-            font-size: 1.2vw;
+            font-size: 1.5vw;
             margin-bottom: 5%;}
 
 .overlay p{font-family: 'NIXGONM-Vb'; 
-           font-size: 1.1vw;}
+           font-size: 1.4vw;}
 
 .star{width: 100%; height: 2vw;
       display: flex; justify-content: center;
       align-items: center;}
 
-.star > img{width: 1vw;}
+.star > img{width: 1.5vw;}
 
 
 
 /* Notice */
-#notice{width: 100%; height: 51.5vw;}
-#notice_box{width: 90%; height: 51.5vw;
-            margin: 0 auto; border-bottom: 0.05vw solid #fff;}
+#notice{width: 100%; height: 65vw;}
+#notice_box{width: 90%; height: 65vw;
+            margin: 0 auto; border-bottom: 0.23vw solid #fff;}
 
 #notice_box h2{font-family: 'NIXGONM-Vb';
-               font-weight: bold; font-size: 4.5vw; 
+               font-weight: bold; font-size: 7vw; 
                padding: 1vw 0 0.5vw;
-               border-bottom: 0.05vw solid #fff;}
+               border-bottom: 0.23vw solid #fff;}
 
 .notice_transverse{width: 100%; height: 40.5%;
                    display: flex; margin-top: 1.6%;}
 .notice_transverse:last-of-type{justify-content: flex-end;}
 
-.space{width: 20vw; height: 20vw;
-       border: 0.05vw solid #fff;
+.space{width: 25vw; height: 25vw;
+       border: 0.23vw solid #fff;
        position: relative;
        cursor: pointer;}
 
 .space h3{font-family: 'NIXGONM-Vb';
-          position: absolute; font-size: 2.3vw;
+          position: absolute; font-size: 3.5vw;
           text-align: center; font-weight: bold;
           top: 50%; left: 50%;
           transform: translate(-50%, -50%);}
@@ -632,13 +639,13 @@ img[alt="star"]{width: 1.5vw;}
        transition: all 0.3s ease;}
 
 .space h4{font-family: 'NIXGONM-Vb';
-          font-size: 4vw; position: absolute;
+          font-size: 4.5vw; position: absolute;
           top: 3%; left: 4%;}
 
 .space p{width: 18vw; height: auto;
          text-align: center;
          font-family: 'NIXGONM-Vb';
-         font-size: 1.3vw;
+         font-size: 2.3vw;
          position: absolute;
          top: 50%; left: 50%; 
          transform: translate(-50%, -50%);}
@@ -650,7 +657,7 @@ img[alt="star"]{width: 1.5vw;}
        transition: all 0.3s ease;}
 
 .white p{width: 85%; height: auto;
-         text-align: center; font-size: 1.3vw;
+         text-align: center; font-size: 1.7vw;
          font-family: 'NIXGONM-Vb';
          font-weight: bold; color: #1e1e1e;
          position: absolute;
@@ -666,39 +673,46 @@ img[alt="star"]{width: 1.5vw;}
 
 
 /* footer */
-footer{width: 100%; height: 14vw;}
-#footer_box{width: 90%; height: 8vw;
+footer{width: 100%; height: 30vw;}
+#footer_box{width: 90%; height: 30vw;
             margin: 0 auto;}
 
-.footer_length{width: 100%; height: 4vw;
+.footer_length{width: 100%; height: 12vw;
                display: flex;}
-.footer_length:first-of-type{border-bottom: 0.05vw solid #fff;}
+.footer_length:first-of-type{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.23vw solid #fff;
+}
 .footer_length:last-of-type{width: 100%; height: 10vw;}
 
 .footer_length:first-of-type img{height: 100%; margin-left: 1%;}
 
-.transverse{width: 50%; height: 100%;}
-.transverse:first-of-type{border-right: 0.05vw solid #fff;}
-.transverse:last-of-type{display: flex;}
+.transverse{width: 100%;}
+.transverse:first-of-type{
+    height: 60%;
+    border-bottom: 0.23vw solid #fff;}
+.transverse:last-of-type{height: 40%;
+                         display: flex;}
 
 #percentage1{width: 70%; height: 100%; 
-             border-right: 0.05vw solid #fff;
+             border-right: 0.23vw solid #fff;
              position: relative;}
 
 #percentage1 span{font-family: 'NIXGONM-Vb';
-                  font-weight: bold; font-size: 1.5vw;
+                  font-weight: bold; font-size: 2.5vw;
                   position: absolute; top: 50%; right: 5%;
                   transform: translateY(-50%);}
 
 #percentage2{width: 30%; height: 100%;}
-#percentage2 > div{width: 4vw; height: 4vw;
+#percentage2 > div{width: 5vw; height: 5vw;
                    float: left; margin: 0 1.5%;
                    position: relative;}
-#percentage2 img{width: 4vw; cursor: pointer;}
+#percentage2 img{height: 100%; cursor: pointer;}
 
-#percentage2 span{font-family: 'NIXGONM-Vb'; width: 11vw;
+#percentage2 span{font-family: 'NIXGONM-Vb'; width: 22vw;
                   padding: 0.7vw 1vw; border-radius: 0.3vw;
-                  font-size: 0.9vw; position: absolute; 
+                  font-size: 2vw; position: absolute; 
                   bottom: 110%; left: 50%;
                   transform: translateX(-50%);
                   z-index: 5; text-align: center;
@@ -709,19 +723,19 @@ footer{width: 100%; height: 14vw;}
         margin: 0.8vw; display: flex;}
 
 #address span{display: inline-block;
-              width: 50%; height: 100%;
+              width: 70%; height: 100%;
               font-family: 'NIXGONM-Vb'; 
-              font-size: 1vw;}
+              font-size: 1.5vw;}
 
-#address > div{width: 50%; height: 100%;}
+#address > div{width: 30%; height: 100%;}
 
 #address ul{width: 100%; height: 100%;
-            display: flex; justify-content: flex-end;
+            display: flex; justify-content: space-around;
             align-items: center;}
-#address ul li{width: 10%; height: 100%;}
+#address ul li{width: 25%; height: 100%;}
 
 #address ul li a{font-family: 'NIXGONM-Vb';
-                 font-size: 0.9vw;
+                 font-size: 1.5vw;
                  padding: 0.2vw 0.6vw;
                  transition: box-shadow .3s ease-in-out;}
 
