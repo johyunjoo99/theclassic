@@ -29,23 +29,104 @@
 @media (max-width: 649px){
 
 /* header */
-header{width: 100%; height: 15vw;}
+header{width: 100%; height: 20vw;}
 #navi{width: 90%; height: 100%;
-      margin: 0 auto; display: flex;
+      margin: 0 auto; position: relative;
+      display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 0.35vw solid #fff;}
 
-.bigNav{width: 35%; height: 100%;
-        display: flex; justify-content: space-around;
-        align-items: center;}
-.bigNav li a{font-family: 'NIXGONM-Vb'; font-size: 2.3vw;
-             padding: 0.3vw 1.5vw;
+.menu{
+        width: 6.5vw; height: 6.5vw;
+        border: 0.35vw solid #fff;
+        position: absolute;
+        top: 50%; left: 0;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
+}
+
+.menu span{
+        display: inline-block;
+        width: 75%; height: 0.05vw;
+        border-bottom: 0.7vw solid #fff;
+}
+
+.menu:hover{
+        background-color: #d82f35;
+}
+
+.flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+#navi .flex:first-of-type{
+        justify-content: flex-end;
+}
+
+#navi .flex:last-of-type{
+        justify-content: flex-start;
+}
+
+.bigNav .close{
+        width: 6.5vw; height: 6.5vw;
+        border: 0.35vw solid #fff;
+        position: absolute;
+        top: 8%; left: 8%;
+}
+
+.bigNav .close span{
+        display: inline-block;
+        width: 80%; height: 0.05vw;
+        border-bottom: 0.7vw solid #fff;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+.bigNav .close span:first-of-type{
+        transform: translate(-46%, -78%) rotate(45deg);
+}
+
+.bigNav .close span:last-of-type{
+        transform: translate(-54%, -96%) rotate(-45deg);
+}
+
+.bigNav .close:hover{background-color: #d82f35;}
+
+.bigNav{
+        position: fixed;
+        top: 0; left: 0;
+        z-index: 20;
+        width: 80%; height: 50%;
+        background-color: #1e1e1e;
+        border-right: 0.35vw solid #fff;
+        transform: translate(-100%);
+        transition: all 0.5s ease;
+        }
+
+.bigNav:last-of-type{
+        top: 50%; left: 0;
+}
+
+.bigNav li{
+        margin-bottom: 20%;
+}
+        
+.bigNav li a{font-family: 'NIXGONM-Vb'; font-size: 6.5vw;
+             padding: 0.6vw 2.5vw;
              transition: box-shadow .3s ease-in-out;}
 
 .bigNav li a:hover{box-shadow: inset 200px 0 0 0 #d82f35;}
 
-#navi img{width: 25%; cursor: pointer;}
+#navi img{height: 80%; margin: 0 auto;
+          cursor: pointer;}
 
 
 /* top icon */
@@ -71,8 +152,8 @@ img[alt="top"]{
             flex-direction: column-reverse;
             justify-content: center;
             align-items: center;
-            border-top: 0.4vw solid #fff;
-            border-bottom: 0.4vw solid #fff;
+            border-top: 0.35vw solid #fff;
+            border-bottom: 0.35vw solid #fff;
             padding: 2.5vw 0;}
 
 #slider_box > img{width: 100%;}
@@ -80,7 +161,7 @@ img[alt="top"]{
 
 
 /* 예매창 */
-#reservation{width: 100%; height: 160vw;
+#reservation{width: 100%; height: 170vw;
              background-color: #060606;
              position: relative;}
 
@@ -95,7 +176,7 @@ form{width: 85%; height: 90%;
 
 /* 영화 선택 */
 #ticket{width: 100%; height: 45%;
-        border: 0.3vw solid #fff;
+        border: 0.35vw solid #fff;
         border-radius: 3vw;
         display: flex; flex-direction: column;
         justify-content: space-evenly; 
@@ -112,7 +193,7 @@ form{width: 85%; height: 90%;
     
 #ticket h3{width: 90%; height: 8vw;
            font-family: 'NIXGONM-Vb';
-           text-align: center; font-size: 7.7vw;
+           text-align: center; font-size: 8vw;
            background-color: #fff; color: #060606;}
 
 #movie_select{width: 90%; height: 45vw;}
@@ -146,14 +227,14 @@ form{width: 85%; height: 90%;
              border-top: 0.35vw dashed #fff;}
 
 #day_select > h3{width: 90%; height: 8vw;
-                 margin: 3% auto 0;
+                 margin: 4% auto 0;
                  font-family: 'NIXGONM-Vb'; font-size: 6.5vw;
                  text-align: center; padding-bottom: 3%;
                  border-bottom: 0.23vw solid #fff;}
 
-#calendar{width: 90%; height: 6vw;
+#calendar{width: 90%; height: 8vw;
           margin: 2% 5%;
-          font-size: 4.5vw; background-color: #fff;
+          font-size: 6vw; background-color: #fff;
           border: none; border-radius: 0;
           font-family: 'NIXGONM-Vb'; font-weight: bold;
           text-align: center; padding: 0.8vw 0 0.5vw;
@@ -218,7 +299,7 @@ form{width: 85%; height: 90%;
              margin: 0 auto;}
 
 #time_select h3{font-family: 'NIXGONM-Vb';
-                font-size: 5.5vw; text-align: center;
+                font-size: 6vw; text-align: center;
                 border: 0.35vw solid #fff;
                 padding: 0.5vw 0;}
 
@@ -268,7 +349,7 @@ label:hover{background-color: #d82f35;}
 
 
 /* 좌석 선택 */
-#seat_select{width: 90%; height: 8vw;
+#seat_select{width: 90%; height: 9.5vw;
              margin: 0% auto; display: flex; 
              justify-content: space-between;
              align-items: center; 
@@ -277,12 +358,12 @@ label:hover{background-color: #d82f35;}
              padding: 5% 0;}
 
 #seat_select h3{font-family: 'NIXGONM-Vb';
-                font-weight: bold; font-size: 5.5vw;}
-#seat_select button{width: 10vw; height: 6vw;
-                    padding: 0.3vw 0 0.3vw 0;
+                font-weight: bold; font-size: 6.5vw;}
+#seat_select button{width: 12vw; height: 7vw;
+                    padding: 0.4vw 0 0.3vw 0;
                     font-family: 'NIXGONM-Vb';
                     text-align: center;
-                    font-weight: bold; font-size: 4vw;
+                    font-weight: bold; font-size: 5.5vw;
                     border: 0.05vw solid #fff;
                     background: none; color: #fff;}
 
@@ -294,10 +375,10 @@ label:hover{background-color: #d82f35;}
 #complete{width: 90%; height: 8vw;
           margin: 2% auto 3%;
           font-family: 'NIXGONM-Vb';
-          font-weight: bold; font-size: 5.5vw;
+          font-weight: bold; font-size: 5.9vw;
           border: 0.35vw solid #fff;
           color: #fff; background-color: #060606;
-          padding: 0.6vw 0;}
+          padding: 0.8vw 0;}
 
 #complete:hover{background-color: #d82f35;
                 cursor: pointer;}
@@ -438,7 +519,7 @@ label:hover{background-color: #d82f35;}
 #infomation label:hover{background-color: #060606;}
 
 #personal_info button{font-family: 'NIXGONM-Vb';
-                      font-weight: bold; font-size: 3.5vw;
+                      font-weight: bold; font-size: 4vw;
                       background-color: #060606;
                       border: 0.35vw solid #fff;
                       color: #fff; padding: 1vw 1.5vw;
@@ -450,56 +531,62 @@ label:hover{background-color: #d82f35;}
 
 
 /* about */
-#about{width: 100%; height: 75vw;}
-#about_box{width: 90%; height: 75vw;
+#about{width: 100%; height: 110vw;
+       margin: 2vw 0 4vw;}
+#about_box{width: 90%; height: 110vw;
            margin: 0 auto; position: relative;
            border-top: 0.23vw solid #fff;
            display: flex; 
            flex-direction: column;
            justify-content: space-between;
            align-items: center;}
-#theater_box{width: 100%; height: 70vw;
-             position: absolute; top: 50%; left: 0;
+#theater_box{width: 100%; height: 100vw;
+             position: absolute; top: 51%; left: 0;
              transform: translateY(-50%);
-             border: 0.23vw solid #fff;}
+             border: 0.35vw solid #fff;}
 
-#theater_info{width: 100%; height: 32vw;
+#theater_info{width: 100%; height: 52vw;
               display: flex;
               flex-direction: column;
               justify-content: center;
               align-items: center;}
 
 #theater_info h2{font-family: 'NIXGONM-Vb';
-                 font-weight: bold; font-size: 6.5vw;
+                 font-weight: bold; font-size: 8vw;
                  text-align: center;
                  margin-bottom: 0.8vw;}
 
 #theater_info p{font-family: 'NIXGONM-Vb';
-                font-size: 2.5vw; text-align: center;
-                line-height: 3vw; margin-top: 0.8vw;}
+                font-size: 3.7vw; text-align: center;
+                line-height: 4.2vw; margin-top: 0.8vw;
+                padding: 0 4.4vw;}
 
-#img_box{width: 90%; height: 33vw;
+#img_box{width: 85%; height: 42vw;
          border: 0.05vw solid #fff;
          position: relative;
          margin: 0 auto;}
 
-#img_box img{width: 70%; position: absolute;
+#img_box img{width: 85%; position: absolute;
              top: 50%; left: 50%;
              transform: translate(-50%, -50%);}
 
 
 
 /* 영화 차트 */
-#movie_chart{width: 100%; height: 60vw;}
-#movie_box{width: 90%; height: 60vw;
+#movie_chart{width: 100%; height: 80vw;}
+#movie_box{width: 90%; height: 80vw;
            margin: 0 auto;}
-#chart_menu{width: 100%; height: 6.5vw;
+#chart_menu{width: 100%; height: 9vw;
             display: flex; margin-top: 2%;}
 
 .movieMenu{width: 50%; height: auto;
-           font-family: 'NIXGONM-Vb'; font-size: 3vw;
-           text-align: center; padding: 1vw 0;
+           font-family: 'NIXGONM-Vb'; font-size: 3.8vw;
+           text-align: center; padding: 2vw 0;
            border: 0.35vw solid #fff;}
+
+.movieMenu:last-of-type{
+        border-left: none;
+}
 
 .movieMenu:hover{background-color: #d82f35;
                  cursor: pointer;}
@@ -509,66 +596,67 @@ label:hover{background-color: #d82f35;}
 
 #order_reservation{width: 100%; height: auto;
                    position: absolute;
-                   border: 0.23vw solid #fff;
+                   border: 0.35vw solid #fff;
                    border-top: none;}
 
-.chart_th{width: 100%; height: 6.5vw;
+.chart_th{width: 100%; height: 8.5vw;
           margin: 0% auto 0; display: flex;
           justify-content: space-evenly;
           align-items: center;}
 
 .chart_th > div{font-family: 'NIXGONB-Vb'; 
-                font-size: 3vw;
+                font-size: 4vw;
                 text-align: center; padding: 1.5vw 0;}
 
 .chart_tr:nth-of-type(even){background-color: #fff;
                             color: #060606;}
 
 .rank{width: 10%;}
-.title{width: 40%;}
+.title{width: 60%;}
 .review{width: 20%; display: flex;
         justify-content: center; 
         align-items: center;}
-.genre{width: 15%;}
+.genre{width: 15%; display: none;}
 
-.chart_tr{width: 100%; height: 6.5vw;
+.chart_tr{width: 100%; height: 8.5vw;
           margin: 0% auto; display: flex;
           justify-content: space-evenly;
           align-items: center;}
 
 .chart_tr > div{font-family: 'NIXGONM-Vb'; 
-                font-size: 2.3vw; font-weight: bold;
+                font-size: 3.6vw; font-weight: bold;
                 text-align: center; padding: 1vw 0;}
 
-img[alt="star"]{width: 2.5vw;}
+img[alt="star"]{width: 3.3vw;}
 
-#scheduled_work{width: 100%; height: 35vw;
+#scheduled_work{width: 100%; height: 63vw;
                 position: absolute; display: flex; 
-                justify-content: space-around;
+                justify-content: space-evenly;
                 align-items: center;
                 border: 0.23vw solid #fff;
                 border-top: none;}
 
 #scheduled_work button{font-family: 'GmarketSansMedium'; 
-                       font-size: 4vw; color: #fff;
-                       padding: 0.6vw 1.2vw 0 1.2vw;
+                       font-size: 6.5vw; color: #fff;
+                       padding: 0.7vw 2.5vw 0 2.5vw;
                        background-color: #1e1e1e;
                        border: 0.05vw solid #fff;
                        border-radius: 0; cursor: pointer;}
 
 #scheduled_work button:hover{background-color: #d82f35;}
 
-#work_slider{width: 60vw; height: 30vw;
+#work_slider{width: 58vw; height: 55vw;
              position: relative;
-             overflow: hidden; }
+             overflow: hidden;
+        }
 
-#work_list{width: 100vw; height: 25vw;
+#work_list{width: 229vw; height: 55vw;
            position: absolute; top: 50%; left: 0;
            transform: translateY(-50%);
-           display: flex; justify-content: space-around;
+           display: flex; justify-content: space-evenly;
            align-items: center;}
 
-.workImg{width: 14vw; height: 21.5vw;
+.workImg{width: 26.5vw; height: 41vw;
          position: relative;
          transition: all 0.5s ease;}
 
@@ -596,41 +684,48 @@ img[alt="star"]{width: 2.5vw;}
                         z-index: 0; opacity: 1;}
 
 .overlay h4{font-family: 'NIXGONM-Vb'; 
-            font-size: 1.5vw;
+            font-size: 3vw;
             margin-bottom: 5%;}
 
 .overlay p{font-family: 'NIXGONM-Vb'; 
-           font-size: 1.4vw;}
+           font-size: 2vw;}
 
-.star{width: 100%; height: 2vw;
+.star{width: 100%; height: 3vw;
       display: flex; justify-content: center;
-      align-items: center;}
+      align-items: center;
+      margin-top: 1%;}
 
-.star > img{width: 1.5vw;}
+.star > img{width: 2.8vw;}
 
 
 
 /* Notice */
-#notice{width: 100%; height: 65vw;}
-#notice_box{width: 90%; height: 65vw;
-            margin: 0 auto; border-bottom: 0.23vw solid #fff;}
+#notice{width: 100%; height: 430vw;}
+#notice_box{width: 90%; height: 430vw;
+            margin: 0 auto; border-bottom: 0.35vw solid #fff;}
 
 #notice_box h2{font-family: 'NIXGONM-Vb';
-               font-weight: bold; font-size: 7vw; 
+               font-weight: bold; font-size: 8.5vw; 
                padding: 1vw 0 0.5vw;
-               border-bottom: 0.23vw solid #fff;}
+               border-bottom: 0.35vw solid #fff;}
 
-.notice_transverse{width: 100%; height: 40.5%;
-                   display: flex; margin-top: 1.6%;}
-.notice_transverse:last-of-type{justify-content: flex-end;}
+.notice_transverse{width: 100%; height: 47%;
+                   display: flex; flex-direction: column;
+                   justify-content: center;
+                   align-items: center;}
+                   
+.notice_transverse:first-of-type{
+        margin-top: 8%;
 
-.space{width: 25vw; height: 25vw;
+}
+
+.space{width: 90%; height: 120vw;
        border: 0.23vw solid #fff;
        position: relative;
        cursor: pointer;}
 
 .space h3{font-family: 'NIXGONM-Vb';
-          position: absolute; font-size: 3.5vw;
+          position: absolute; font-size: 7.5vw;
           text-align: center; font-weight: bold;
           top: 50%; left: 50%;
           transform: translate(-50%, -50%);}
@@ -641,13 +736,13 @@ img[alt="star"]{width: 2.5vw;}
        transition: all 0.3s ease;}
 
 .space h4{font-family: 'NIXGONM-Vb';
-          font-size: 4.5vw; position: absolute;
-          top: 3%; left: 4%;}
+          font-size: 10vw; position: absolute;
+          top: 6%; left: 6%;}
 
-.space p{width: 18vw; height: auto;
+.space p{width: 65vw; height: auto;
          text-align: center;
          font-family: 'NIXGONM-Vb';
-         font-size: 2.3vw;
+         font-size: 5vw;
          position: absolute;
          top: 50%; left: 50%; 
          transform: translate(-50%, -50%);}
@@ -659,7 +754,8 @@ img[alt="star"]{width: 2.5vw;}
        transition: all 0.3s ease;}
 
 .white p{width: 85%; height: auto;
-         text-align: center; font-size: 1.7vw;
+         text-align: center; font-size: 5vw;
+         line-height: 5.5vw;
          font-family: 'NIXGONM-Vb';
          font-weight: bold; color: #1e1e1e;
          position: absolute;
@@ -675,18 +771,19 @@ img[alt="star"]{width: 2.5vw;}
 
 
 /* footer */
-footer{width: 100%; height: 30vw;}
-#footer_box{width: 90%; height: 30vw;
+footer{width: 100%; height: 65vw;}
+#footer_box{width: 90%; height: 65vw;
             margin: 0 auto;}
 
-.footer_length{width: 100%; height: 12vw;
+.footer_length{width: 100%; height: 25vw;
                display: flex;}
 .footer_length:first-of-type{
-    display: flex;
     flex-direction: column;
     border-bottom: 0.23vw solid #fff;
 }
-.footer_length:last-of-type{width: 100%; height: 10vw;}
+.footer_length:last-of-type{
+        width: 100%; height: 15vw;
+}
 
 .footer_length:first-of-type img{height: 100%; margin-left: 1%;}
 
@@ -697,49 +794,53 @@ footer{width: 100%; height: 30vw;}
 .transverse:last-of-type{height: 40%;
                          display: flex;}
 
-#percentage1{width: 70%; height: 100%; 
+#percentage1{width: 65%; height: 100%; 
              border-right: 0.23vw solid #fff;
              position: relative;}
 
 #percentage1 span{font-family: 'NIXGONM-Vb';
-                  font-weight: bold; font-size: 2.5vw;
+                  font-weight: bold; font-size: 5vw;
                   position: absolute; top: 50%; right: 5%;
                   transform: translateY(-50%);}
 
-#percentage2{width: 30%; height: 100%;}
-#percentage2 > div{width: 5vw; height: 5vw;
+#percentage2{width: 35%; height: 100%;}
+#percentage2 > div{width: 9.2vw; height: 9.2vw;
                    float: left; margin: 0 1.5%;
                    position: relative;}
 #percentage2 img{height: 100%; cursor: pointer;}
 
-#percentage2 span{font-family: 'NIXGONM-Vb'; width: 22vw;
-                  padding: 0.7vw 1vw; border-radius: 0.3vw;
-                  font-size: 2vw; position: absolute; 
-                  bottom: 110%; left: 50%;
-                  transform: translateX(-50%);
+#percentage2 span{font-family: 'NIXGONM-Vb'; width: 40vw;
+                  padding: 1.3vw 1vw; border-radius: 1.5vw;
+                  font-size: 3.5vw; position: absolute; 
+                  bottom: 110%; right: 0;
                   z-index: 5; text-align: center;
                   background-color: rgba(6, 6, 6, 0.9);
                   display: none;}
 
-#address{width: 100%; height: 4vw;
-        margin: 0.8vw; display: flex;}
+#address{width: 100%; height: 100%;
+         margin: 0.8vw; display: flex;
+         flex-direction: column-reverse;
+         justify-content: flex-end;
+         align-items: flex-end;}
 
 #address span{display: inline-block;
-              width: 70%; height: 100%;
+              width: 80%; height: 50%;
+              line-height: 4vw;
               font-family: 'NIXGONM-Vb'; 
-              font-size: 1.5vw;}
+              font-size: 3vw; text-align: right;}
 
-#address > div{width: 30%; height: 100%;}
+#address > div{width: 80%; height: 35%;
+               margin-top: 1%;}
 
 #address ul{width: 100%; height: 100%;
             display: flex; justify-content: space-around;
-            align-items: center;}
+            align-items: flex-end;}
 #address ul li{width: 25%; height: 100%;}
 
 #address ul li a{font-family: 'NIXGONM-Vb';
-                 font-size: 1.5vw;
-                 padding: 0.2vw 0.6vw;
-                 transition: box-shadow .3s ease-in-out;}
+                 font-size: 3.5vw;
+                 padding: 0.8vw 1vw;
+                 transition: all .3s ease-in-out;}
 
 #address ul li a:hover{box-shadow: inset 200px 0 0 0 #d82f35;}
 

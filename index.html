@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Classic</title>
 
+    <link rel="shortcut icon" href="img/index_img/favicon.svg" type="image/x-icon">
+
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
 
@@ -26,12 +28,21 @@
         <!-- header -->
         <header>
             <div id="navi">
-                <ul class="bigNav">
+                <div class="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="bigNav flex">
+                    <div class="close">
+                        <span></span>
+                        <span></span>
+                    </div>
                     <li><a href="#slider">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                 </ul>
                 <img src="img/index_img/logo.svg" alt="logo">
-                <ul class="bigNav">
+                <ul class="bigNav flex">
                     <li><a href="#movie_chart">MOVIE</a></li>
                     <li><a href="#notice">NOTICE</a></li>
                 </ul>
@@ -710,7 +721,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="workImg scale">
+                                <div class="workImg">
                                     <img class="poster" src="img/index_img/poster2.jpg" alt="The Shawshank Redemption">
                                     <div class="overlay">
                                         <h4>The Shawshank <br>
